@@ -285,6 +285,46 @@ footer .powered{margin-top:14px;font-size:12.5px;font-weight:600;letter-spacing:
 footer .powered b{color:var(--ink,#1c2b3a);font-weight:800}
 .sheet .pkg-photo{width:100%;height:150px;object-fit:cover;border-radius:10px;margin:4px 0 10px;display:block}
 @media print{ .listbar,.tabs,.sheet-wrap,.add-btn,.qty,.pick-btn,.chips,.search{display:none!important} body{padding-bottom:0;background:#fff} }
+
+/* ===== Readability + containment pass (Sanjay 2026-11-18: "hard to read and
+   navigate, everything is wide open") — bigger type per his standing rule,
+   tighter grids, shorter cards, sticky wayfinding, nothing sprawls. ===== */
+body{font-size:18px;line-height:1.55}
+.pagehead p{font-size:17px;line-height:1.5}
+.viewhint{font-size:15.5px}
+.tabs button{font-size:16.5px;font-weight:600;padding:13px 6px 11px}
+.chips{position:sticky;top:49px;z-index:25;background:var(--bg);padding-top:8px}
+.chips button{font-size:16px;min-height:48px;padding:10px 17px}
+.cat-sub{font-size:16.5px}
+.search{font-size:17px;padding:12px 14px}
+.decide span{font-size:15px}
+.decide button{font-size:15px;padding:9px 15px}
+.pkg .for{font-size:15px}
+.pkg .bestfor{font-size:14.5px;line-height:1.45}
+.pkg .count{font-size:13.5px}
+@media (min-width:720px){
+  .pkg-row{grid-template-columns:repeat(3,1fr)}
+  .pkg .pkg-img{height:118px}
+}
+.prod-photo{aspect-ratio:auto;height:168px}
+@media (max-width:719px){.prod-photo{height:150px}}
+.prod .info{padding:12px 16px 2px}
+.prod h4{font-size:22px}
+.prod .desc{font-size:16.5px;line-height:1.55;color:#3c4658}
+.prod .tag{font-size:14px}
+.prod .row{padding:10px 16px 14px}
+.compare-scroll{max-height:62vh;overflow:auto}
+table.compare{font-size:15.5px}
+table.compare th,table.compare td{padding:10px 12px}
+table.compare thead th{font-size:16.5px;position:sticky;top:0;z-index:2}
+.g-what{font-size:17px}
+.g-why li{font-size:16px}
+.g-prow .g-pn{font-size:17px}
+.g-prow .g-pr{font-size:15.5px;color:#3c4658}
+.g-titles p{font-size:14.5px}
+.sheet ul.items,.sheet .hl{font-size:16px}
+.sheet .sub{font-size:15.5px}
+.topbar .phone{font-size:16.5px}
 </style>
 </head>
 <body>
@@ -1098,7 +1138,7 @@ $("guideList").innerHTML=GUIDE.map(function(g,ci){
    return '<div class="g-prow">'+thumb+'<div class="g-pt"><div class="g-pn">'+esc(it[0])+'</div><div class="g-pr">'+esc(it[1])+"</div></div></div>";
  }).join("");
  var a=GACC[ci];
- return '<details class="g-card" style="--acc:'+a[0]+';--acc-l:'+a[1]+';--acc-ink:'+a[2]+'"'+(ci===0?" open":"")+'>'
+ return '<details class="g-card" style="--acc:'+a[0]+';--acc-l:'+a[1]+';--acc-ink:'+a[2]+'\">'
   +'<summary><div class="g-photo"><img src="'+GIMG[ci].src+'" alt="'+GIMG[ci].alt+'" loading="lazy" style="object-position:'+GIMG[ci].pos+'"/>'
   +'<span class="g-chip" aria-hidden="true">'+ICONS[ci]+'</span>'
   +'<span class="g-count">'+CATS[ci].items.length+' products</span>'
