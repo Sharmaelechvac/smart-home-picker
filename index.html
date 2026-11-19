@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="sk">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
@@ -326,8 +326,31 @@ table.compare thead th{font-size:16.5px;position:sticky;top:0;z-index:2}
 .sheet .sub{font-size:15.5px}
 .topbar .phone{font-size:16.5px}
 </style>
+<meta name="theme-color" content="#264387">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://sharma-kit.sharma-crew.workers.dev/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sharma-kit.sharma-crew.workers.dev/assets/favicon-32.png">
+<link rel="stylesheet" href="https://sharma-kit.sharma-crew.workers.dev/sharma-kit.css">
+<script src="https://sharma-kit.sharma-crew.workers.dev/sharma-kit.js" defer></script>
+<style>
+/* Sharma kit bridge: kit header/tab bar take over navigation; readability pass preserved. */
+body.sk{font-size:18px;line-height:1.55;padding-bottom:calc(var(--sk-tab-h,54px) + env(safe-area-inset-bottom,0px) + 84px)}
+.topbar,.tabs{display:none!important}
+.chips{top:55px!important}
+.listbar{bottom:calc(var(--sk-tab-h,54px) + env(safe-area-inset-bottom,0px))}
+.sk-header{z-index:60}
+</style>
 </head>
-<body>
+<body class="sk">
+<header class="sk-header"><div class="sk-header__bar">
+  <div class="sk-header__lead"><a class="sk-header__logo" href="./"><img src="https://sharma-kit.sharma-crew.workers.dev/assets/logo-white-header.png" alt="Sharma Electric &amp; HVAC" width="103" height="20"></a></div>
+  <div class="sk-header__title">Smart Home Picker</div>
+  <div class="sk-header__trail"><a class="sk-header__btn" href="tel:+14078819076" aria-label="Call Sharma"><svg class="sk-icon"><use href="#i-phone"/></svg></a></div>
+</div></header>
+<div class="sk-offline"></div>
 <div class="topbar">
   <img class="logo" src="assets/logo.png" alt="Sharma Electric &amp; HVAC — Power. Comfort. Trust."/>
   <a class="phone" href="tel:+14078819076">407 881 9076</a>
@@ -1163,6 +1186,34 @@ document.querySelectorAll("[data-gocz]").forEach(function(b){b.addEventListener(
 renderCz();
 renderProds();
 renderSel();
+</script>
+<nav class="sk-tabbar" aria-label="Sections"><div class="sk-tabbar__inner"><a class="sk-tab" href="#" data-sk-view="packages"><svg class="sk-icon"><use href="#i-home"/></svg>Packages</a><a class="sk-tab" href="#" data-sk-view="products"><svg class="sk-icon"><use href="#i-list"/></svg>Products</a><a class="sk-tab" href="#" data-sk-view="customize"><svg class="sk-icon"><use href="#i-edit"/></svg>Customize</a><a class="sk-tab" href="#" data-sk-view="learn"><svg class="sk-icon"><use href="#i-doc"/></svg>Learn</a><a class="sk-tab" href="#" data-sk-view="compare"><svg class="sk-icon"><use href="#i-chart"/></svg>Compare</a></div></nav>
+<script>
+/* Sharma kit v1.2 adapter: service worker + bottom tab bar wired to this app's
+   existing tab buttons. No data, links or behaviour change. */
+(function(){
+  function reg(){ if (window.SK && SK.registerSW) { try { SK.registerSW("sw.js"); } catch(e){} } }
+  if (document.readyState === "complete") reg(); else addEventListener("load", reg);
+  var tabs = document.querySelectorAll(".sk-tab[data-sk-view]");
+  if (!tabs.length) return;
+  function sync(){
+    var on = document.querySelector('[data-view].on, [data-view][aria-selected="true"]');
+    tabs.forEach(function(t){ 
+      if (on && t.getAttribute("data-sk-view") === on.getAttribute("data-view")) t.setAttribute("aria-current","page");
+      else t.removeAttribute("aria-current");
+    });
+  }
+  tabs.forEach(function(t){
+    t.addEventListener("click", function(e){
+      e.preventDefault();
+      var b = document.querySelector('[data-view="' + t.getAttribute("data-sk-view") + '"]');
+      if (b) b.click();
+      sync(); scrollTo(0,0);
+    });
+  });
+  document.addEventListener("click", function(){ setTimeout(sync, 30); });
+  sync();
+})();
 </script>
 </body>
 </html>
