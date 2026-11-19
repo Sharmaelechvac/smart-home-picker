@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="sk">
+<html lang="en" class="sk" data-scheme="light">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
@@ -16,9 +16,7 @@
   --good:#16794a; --radius:12px; --shadow:0 8px 24px rgba(11,30,58,.14);
   --bar-h:64px;
 }
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#0a1526; --surface:#12233f; --surface2:#182c4d; --ink:#eef2f8; --muted:#a9b8cf; --line:#243a5e; --shadow:0 8px 24px rgba(0,0,0,.4); }
-}
+[data-scheme="dark"]{ --bg:#0a1526; --surface:#12233f; --surface2:#182c4d; --ink:#eef2f8; --muted:#a9b8cf; --line:#243a5e; --shadow:0 8px 24px rgba(0,0,0,.4); }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:"Barlow",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.4;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom) + 10px)}
@@ -49,7 +47,7 @@ main{max-width:960px;margin:0 auto;padding:0 12px}
 @media (min-width:720px){.tabs button{font-size:15px;padding:11px 10px 9px}}
 .tabs button:hover{color:var(--ink)}
 .tabs button.on{background:transparent;color:var(--navy);font-weight:700;border-bottom-color:var(--orange)}
-@media (prefers-color-scheme: dark){.tabs button.on{color:var(--ink)}}
+[data-scheme="dark"] .tabs button.on{color:var(--ink)}
 .view{display:none}
 .view.on{display:block}
 .viewhint{color:var(--muted);font-size:14px;margin:2px 2px 10px}
@@ -72,7 +70,7 @@ main{max-width:960px;margin:0 auto;padding:0 12px}
 .pkg h3{margin:0;font-size:20px;line-height:1.05;text-transform:uppercase}
 .pkg .for{color:var(--muted);font-size:13.5px;margin:0}
 .pkg .count{font-weight:700;color:var(--navy);background:var(--surface2);border-radius:999px;padding:2px 9px;font-size:12.5px;width:fit-content}
-@media (prefers-color-scheme: dark){.pkg .count{color:var(--ink)}}
+[data-scheme="dark"] .pkg .count{color:var(--ink)}
 .badge-pop{position:absolute;top:8px;right:8px;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.3);background:var(--orange);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 9px;border-radius:999px;text-transform:uppercase}
 .badge-lux{position:absolute;top:8px;right:8px;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.3);background:var(--navy);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 9px;border-radius:999px;text-transform:uppercase;border:1px solid var(--gold)}
 .pkg .spacer{flex:1}
@@ -90,7 +88,7 @@ main{max-width:960px;margin:0 auto;padding:0 12px}
 .chips::-webkit-scrollbar{display:none}
 .chips button{flex:0 0 auto;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:10px 15px;min-height:44px;font-weight:600;font-size:14.5px;cursor:pointer}
 .chips button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-@media (prefers-color-scheme: dark){.chips button.on{background:var(--orange);border-color:var(--orange)}}
+[data-scheme="dark"] .chips button.on{background:var(--orange);border-color:var(--orange)}
 .search{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font-size:16px;margin-bottom:8px}
 .cat-sub{color:var(--muted);font-size:14.5px;margin:0 2px 12px}
 
@@ -109,7 +107,7 @@ main{max-width:960px;margin:0 auto;padding:0 12px}
 .prod .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
 .prod .tag{font-size:13px;font-weight:700;border-radius:999px;padding:5px 12px;background:var(--surface2);color:var(--ink);white-space:normal;line-height:1.3}
 .prod .tag.best{background:rgba(232,106,16,.14);color:var(--orange)}
-@media (prefers-color-scheme: dark){.prod .tag.best{color:var(--gold)}}
+[data-scheme="dark"] .prod .tag.best{color:var(--gold)}
 .prod .tag.inc b{font-weight:700}
 .prod .row{display:flex;align-items:center;gap:10px;padding:12px 16px 16px;margin-top:auto}
 .prod .row .spacer{flex:1}
@@ -231,7 +229,7 @@ form.client .full{grid-column:1/-1}
 .g-card .g-actions{margin-top:13px}
 .g-card .g-actions .btn-navy{background:var(--acc);color:var(--acc-ink)}
 .g-card .g-actions .btn-outline{border-color:var(--acc);color:var(--acc)}
-@media (prefers-color-scheme: dark){.g-card .g-actions .btn-outline{border-color:var(--acc-l);color:var(--acc-l)}}
+[data-scheme="dark"] .g-card .g-actions .btn-outline{border-color:var(--acc-l);color:var(--acc-l)}
 /* Customize */
 .cz-h{font-size:19px;text-transform:uppercase;margin:14px 2px 8px}
 .basegrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -253,7 +251,7 @@ form.client .full{grid-column:1/-1}
 .seg2{display:flex;flex-wrap:wrap;gap:6px}
 .seg2 button{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 12px;font-weight:600;font-size:13.5px;cursor:pointer}
 .seg2 button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-@media (prefers-color-scheme: dark){.seg2 button.on{background:var(--orange);border-color:var(--orange)}}
+[data-scheme="dark"] .seg2 button.on{background:var(--orange);border-color:var(--orange)}
 .cz-sum{background:var(--surface2);border-radius:12px;padding:11px 13px;font-size:14.5px;margin:12px 0}
 .cz-xrow{display:flex;gap:11px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
 .cz-xrow:last-child{border-bottom:0}
@@ -325,6 +323,16 @@ table.compare thead th{font-size:16.5px;position:sticky;top:0;z-index:2}
 .sheet ul.items,.sheet .hl{font-size:16px}
 .sheet .sub{font-size:15.5px}
 .topbar .phone{font-size:16.5px}
+
+/* --- Batch C upgrade: native feel + light-always (dark via data-scheme only) --- */
+.view-enter{animation:shpViewIn .2s cubic-bezier(.32,.72,.35,1)}
+@keyframes shpViewIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.view-enter{animation:none}}
+#sheet{overflow:hidden}
+#sheet .sk-sheet__body{padding:0}
+#sheet .sheet{position:static;left:auto;right:auto;bottom:auto;transform:none;width:auto;max-height:none;overflow:visible;margin:0;box-shadow:none}
+.sk-skel{margin:10px 0}
+.decide button,.chips button,.link-btn{min-height:44px}
 </style>
 <meta name="theme-color" content="#264387">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -390,24 +398,24 @@ body.sk{font-size:18px;line-height:1.55;padding-bottom:calc(var(--sk-tab-h,54px)
     <input class="search" id="prodSearch" type="search" placeholder="Search products…" aria-label="Search products"/>
     <div class="chips" id="catChips"></div>
     <p class="cat-sub" id="catSub"></p>
-    <div class="prod-list" id="prodList"></div>
+    <div class="prod-list" id="prodList"><div class="sk-skel"></div><div class="sk-skel"></div><div class="sk-skel"></div></div>
   </section>
 
   <section class="view" id="view-customize">
     <p class="viewhint">Start from a package, take out what you don't want, add extras, and make the packet's choices yours. Your custom list goes to Sharma for one priced quote — no prices here.</p>
     <h3 class="cz-h">1 · Start from</h3>
-    <div class="basegrid" id="czBases"></div>
+    <div class="basegrid" id="czBases"><div class="sk-skel"></div><div class="sk-skel"></div></div>
     <div id="czMain"></div>
   </section>
 
   <section class="view" id="view-learn">
     <p class="viewhint">What everything in the catalog does, in plain English — from Sharma's smart home packet, one category at a time. Tap a category to open it.</p>
-    <div id="guideList"></div>
+    <div id="guideList"><div class="sk-skel"></div><div class="sk-skel"></div><div class="sk-skel"></div></div>
   </section>
 
   <section class="view" id="view-compare">
     <p class="viewhint">What each package can do. Scroll sideways for all five.</p>
-    <div class="compare-scroll"><table class="compare" id="compareTable"></table></div>
+    <div id="compareSkel"><div class="sk-skel"></div><div class="sk-skel"></div></div><div class="compare-scroll"><table class="compare" id="compareTable"></table></div>
     <p class="fineprint">No subscriptions included in any package. eero Plus, Ring Home, Tapo Care, myQ and Samsung Art Store memberships are optional, paid by the homeowner.</p>
   </section>
 
@@ -426,14 +434,15 @@ body.sk{font-size:18px;line-height:1.55;padding-bottom:calc(var(--sk-tab-h,54px)
   <button class="btn btn-primary" id="btnOpenList" type="button">Review &amp; send →</button>
 </div>
 
-<div class="sheet-wrap" id="sheetWrap" aria-hidden="true">
-  <div class="sheet-bg" id="sheetBg"></div>
-  <div class="sheet" role="dialog" aria-modal="true">
-    <div class="grip"></div>
-    <button class="x" id="sheetClose" type="button" aria-label="Close">✕</button>
-    <div id="sheetBody"></div>
+<section class="sk-sheet" id="sheet" aria-hidden="true">
+  <div class="sk-sheet__grab"></div>
+  <div class="sk-sheet__body">
+    <div class="sheet">
+      <button class="x" id="sheetClose" type="button" aria-label="Close">✕</button>
+      <div id="sheetBody"></div>
+    </div>
   </div>
-</div>
+</section>
 
 <div class="toast" id="toast" role="status"></div>
 
@@ -443,749 +452,7 @@ body.sk{font-size:18px;line-height:1.55;padding-bottom:calc(var(--sk-tab-h,54px)
   <div class="lb-cap"><h3 id="lbName"></h3><p id="lbDesc"></p></div>
 </div>
 
-<script>
-var PACKAGES=[
- {id:"basic",tier:"Basic",name:"Smart Start",for:"For spec and starter homes",count:"14 items + 1 optional",
-  bullets:["Strong WiFi in every room","Tapo color night-vision cameras, no monthly fee","Ring Alarm + fingerprint front-door lock"],
-  items:["eero 6 mesh WiFi, 3 units, Ethernet backhaul","Ethernet jacks — 2 locations","Structured media panel (if needed)","Ring Battery Doorbell, Head-to-Toe video","4 × Tapo C325WB V2 PoE color night-vision cameras (driveway, 2 sides, backyard) on D-Link DGS-1005P PoE+ switch","Tapo C110 2K garage camera","Ring Alarm 8-piece kit","eufy Smart Lock C220 fingerprint lock — front door","Thermostat — your choice: ecobee Smart Thermostat Essential or Honeywell Home T5 Smart Wi-Fi Thermostat (RTH8800WF2022)","3 × MOES WiFi smart switches (outdoor, kitchen, living)","Echo Show 8 (newest) — kitchen","Echo Pop — main bedroom","WiFi water leak sensors — under the kitchen sink + at the water heater","Whole-home surge protector","Optional: extra Ring door/window contacts"]},
- {id:"basic2",tier:"Basic 2",name:"Smart Start Plus",for:"For starter and entry homes",count:"18 items",
-  bullets:["Faster eero 6+ WiFi, wired the right way","Tapo cameras + Ring Alarm","Fingerprint locks front + garage, myQ garage opener"],
-  items:["eero 6+ mesh WiFi, 3 units, Ethernet backhaul","Ethernet jacks — 4 locations","2 structured media panels","Ring Battery Doorbell, Head-to-Toe video","4 × Tapo C325WB V2 PoE cameras + D-Link PoE+ switch","Tapo C110 2K garage camera","Ring Alarm 8-piece kit","2 × eufy Smart Lock C220 — front + garage entry","Chamberlain B4613T myQ belt-drive garage opener with battery backup","ecobee Essential + 2 SmartSensors","3 × MOES smart switches + 3 × MOES smart dimmers","2 × MOES smart fan switches","Echo Show 8 (newest) — kitchen","Echo Pop — main bedroom","WiFi water leak sensors — under the kitchen sink + at the water heater","Google Nest Protect smart smoke + CO alarm","Whole-home surge protector"]},
- {id:"good",tier:"Good",name:"Connected Home",for:"For entry and production homes",count:"23 items",
-  bullets:["eero 6+ WiFi + backup internet choice","Six Tapo cameras, Ring Alarm, fingerprint locks","65″ Samsung The Frame TV + under-cabinet lighting"],
-  items:["eero 6+ mesh WiFi, 3 units, Ethernet backhaul","Ethernet jacks — 4 locations","2 structured media panels","Ring Battery Doorbell","5 × Tapo PoE color night-vision cameras + Tapo garage camera","Ring Alarm 8-piece kit","2 × eufy Smart Lock C220 — front + garage entry","Chamberlain B4613T myQ garage opener","ecobee Enhanced + 2 SmartSensors","3 × MOES smart switches + 3 × MOES smart dimmers","MOES 4-button scene switch + Zigbee hub","Samsung 65″ The Frame TV","Living-room audio — your choice of system","Echo Show 8 — kitchen + main bedroom","Under-cabinet LED lighting, kitchen (~20 ft)","Backup internet: eero Signal or T-Mobile 5G (your choice)","Google Nest Protect smart smoke + CO alarm","REME HALO whole-home air purifier (in-duct)","Rachio 3 smart sprinkler controller","Generac GP9500E portable generator + 50A inlet & interlock","Whole-home surge protector"]},
- {id:"better",tier:"Better",name:"Entertainer",for:"For move-up homes",count:"32 items",pop:true,
-  bullets:["WiFi 7 (eero Pro 7 or UniFi), wired right","6 Ring Spotlight Cams + Ring Alarm Pro","75–80″ LG OLED + Sonos surround, patio audio"],
-  items:["WiFi 7: eero Pro 7 or UniFi, 4 units, Ethernet backhaul","Ethernet jacks — 6 locations (incl. each TV + office)","Structured media panel","Ring video doorbell","6 × Ring Spotlight Cams, wired (5 outdoor + 1 garage)","Ring Alarm Pro with door/window sensors","Keyless entry — front + garage entry doors","12 smart switches + dimmers (living, dining, main bedroom)","MOES 4-button scene switches, as many as you want","Recessed lights — kitchen + living room","Legrand guide lights — common areas","ecobee Premium + room sensors","Smart fan control — living room","Motorized blinds","75″ or 80″ LG OLED TV + Sonos surround (Amp, 2 in-ceiling, sub, 2 Era 100)","Philips Hue color lighting — living room + TV lightstrip","Main bedroom: Samsung The Frame TV + Sonos Amp & 2 in-ceiling speakers","Echo Show 8 — kitchen (intercom)","Echo Show 15 — every bedroom; Echo Show 5 — office","Under- + above-cabinet lighting","Patio audio: 2 outdoor speakers + amplifier","WiFi garage opener with built-in camera","Daikin garage mini-split","Backup internet: Starlink or T-Mobile 5G (your choice)","EcoFlow DELTA Pro Ultra + Smart Home Panel 2","Generac GP9500E portable generator + 50A inlet","Moen Flo smart water shutoff — whole-home leak protection","Pentair IntelliCenter pool automation","AprilAire whole-home dehumidifier","Samsung The Terrace outdoor TV — patio","EV-ready wiring — garage","Whole-home surge protector"]},
- {id:"best",tier:"Best",name:"Signature Smart Estate",for:"For luxury and custom homes",count:"36 items + 1 optional",lux:true,
-  bullets:["UniFi Wi-Fi 7 + network rack","8 wired Ring Elite cameras, 4K doorbell, Alarm Pro","Home theater 7.1, Generac 26 kW standby generator"],
-  items:["UniFi Wi-Fi 7: ceiling, in-wall + outdoor access points","Ethernet to panel, TVs + rooms; network rack","Ring 4K Elite doorbell","8 × Ring Elite wired cameras","Ring Alarm Pro + motion sensors","Keyless entry — every outside door","Philips Hue landscape spotlights","Smart lighting nearly every room + MOES scene switches","Recessed lights — every room","Guide lights — common areas + halls","ecobee Premium — every zone","Fan control — living + bedrooms","Motorized blinds","83″ LG OLED + curated sound — living room","Philips Hue — 3 rooms + lightstrips","Home theater 7.1 — media room","Other bedroom: 50″ TCL TV + speakers","AirPlay connected speakers — kitchen, dining, bath","4 patio speakers + subwoofer","Echo Show 21 — kitchen + living","Echo Show 15 — every bedroom","Under- + above-cabinet lighting","Belt-drive garage opener + camera","Daikin garage mini-split","Generac 26 kW automatic standby generator","Backup internet: Starlink or T-Mobile 5G","EV-ready wiring + Level 2 charger installed","Whole-home surge protector","Moen Flo smart water shutoff — whole-home leak protection","Pentair IntelliCenter pool automation","AprilAire whole-home dehumidifier","Airthings View Plus air quality monitor","Optional: EcoFlow battery / Tesla Powerwall 3"]}
-];
-var PKGIMG={basic:"assets/pkg-basic.jpg",basic2:"assets/pkg-basic2.jpg",good:"assets/kitchen.jpg",better:"assets/pkg-better.jpg",best:"assets/exterior.jpg"};
-var PKGALT={basic:"Modest single-story Florida starter home in daytime, front door, driveway and garage in view",basic2:"Slightly larger new entry home with a wide garage door across the front and neat palm landscaping",good:"Bright open kitchen flowing into a family living room in a production home",better:"Move-up home at dusk, living area opening to a patio and pool with string lights for entertaining",best:"Luxury Florida estate at dusk with pool palms and landscape lighting glowing"};
-var PKGBEST={basic:"Best if you want the essentials covered — safety, strong WiFi and a smart front door — without overbuilding.",
- basic2:"Best if you want Basic, plus a smarter garage and dimmers where you live most.",
- good:"Best if you want a family home that feels connected — a TV that looks like art, more cameras, backup internet.",
- better:"Best if you entertain — movie-night picture and sound, patio audio, and power backup for storms.",
- best:"Best if this is a custom or luxury build and you want everything wired in from day one."};
-var COMPARE=[
- ["See who's at the door from your phone","✓","✓","✓","✓","✓"],
- ["Watch your yard & driveway from anywhere","✓","✓","✓","✓","✓"],
- ["Keep an eye on the garage","✓","✓","✓","✓","✓"],
- ["Unlock doors with fingerprint, code or phone","✓","✓","✓","✓","✓"],
- ["Home alarm on doors & windows","✓","✓","✓","✓","✓"],
- ["Surge protection for TVs & appliances","✓","✓","✓","✓","✓"],
- ["Strong WiFi in every room","✓","✓","✓","✓","✓"],
- ["Change the temperature from your phone","✓","✓","✓","✓","✓"],
- ["Control lights by phone, voice or schedule","✓","✓","✓","✓","✓"],
- ["One button sets a whole scene","—","—","✓","✓","✓"],
- ["Talk to your house (“Alexa…” )","✓","✓","✓","✓","✓"],
- ["Bright light on the kitchen counters","—","—","✓","✓","✓"],
- ["Dim the lights for dinner","—","✓","✓","✓","✓"],
- ["Soft night / guide lights","—","—","—","✓","✓"],
- ["Ceiling fans by phone or voice","—","✓","—","✓","✓"],
- ["Blinds that open & close themselves","—","—","—","✓","✓"],
- ["Internet stays on in a storm or outage","—","—","✓","✓","✓"],
- ["Keep lights & fridge on in an outage","—","—","✓","✓","✓"],
- ["Backup power that switches on by itself","—","—","—","✓","✓"],
- ["Whole house powered, even for days","—","—","—","—","✓"],
- ["Music in the living room","—","—","✓","✓","✓"],
- ["Movie-theater picture & sound","—","—","—","✓","✓"],
- ["Lights in any color (Hue)","—","—","—","✓","✓"],
- ["A TV that looks like art","—","—","✓","✓","✓"],
- ["Music on the patio","—","—","—","✓","✓"],
- ["Your own home theater","—","—","—","—","✓"],
- ["Open & close the garage from your phone","—","✓","✓","✓","✓"],
- ["A cool garage, even in summer","—","—","—","✓","✓"],
- ["Ready for an electric car","—","—","—","✓","✓"],
- ["EV charger installed","—","—","—","—","✓"],
- ["Smoke & CO alerts on your phone","—","✓","✓","✓","✓"],
- ["Water leaks caught before they ruin floors","✓","✓","✓","✓","✓"],
- ["A leak can shut your water off by itself","—","—","—","✓","✓"],
- ["Air cleaned while the AC runs","—","—","✓","✓","✓"],
- ["Humidity controlled all summer","—","—","—","✓","✓"],
- ["Sprinklers that run by the weather","—","—","✓","✓","✓"],
- ["Pool pump, heater & lights from your phone","—","—","—","✓","✓"],
- ["A TV out on the patio","—","—","—","✓","✓"]
-];
-var CATS=[
- {name:"WiFi & Network",short:"WiFi",sub:"Strong WiFi in every room — wired together before drywall.",items:[
-  ["eero 6 mesh WiFi — 3 units","Three eero 6 units with Ethernet backhaul for whole-home coverage.","Basic"],
-  ["eero 6+ mesh WiFi — 3 units","Faster eero 6+ units, wired to each other behind the walls.","Basic 2 · Good"],
-  ["WiFi 7 — eero Pro 7 or UniFi, 4 units","Your choice: eero Pro 7 + 6E mesh, or a UniFi Wi-Fi 7 system.","Better"],
-  ["UniFi Wi-Fi 7 + network rack","Ceiling, in-wall and outdoor UniFi access points with a proper network rack.","Best"],
-  ["Ethernet jacks","Wired internet at the TVs, office and spots you pick — steadier than WiFi. Sold per location plan (2, 4 or 6).","All packages"],
-  ["Structured media panel","One neat panel where internet, camera and TV wiring meet.","All packages"],
-  ["Outdoor WiFi access point — patio & pool","A weatherproof access point so the patio, lanai and pool deck get the same strong WiFi as inside.","Better · Best"],
-  ["Network rack UPS battery","A battery backup for the modem, router and camera switch, so the network rides through short outages.","Good · Better · Best"] ]},
- {name:"Cameras & Alarm",short:"Cameras",sub:"See who's there, day or night — from your phone, anywhere.",items:[
-  ["Ring Battery Doorbell (Head-to-Toe)","See, hear and talk to anyone at the front door; Head-to-Toe video shows packages on the mat.","Basic · Basic 2 · Good"],
-  ["Ring 4K Elite doorbell","Wired 4K flagship doorbell for the Signature estate.","Best"],
-  ["Tapo C325WB V2 PoE cameras — set of 4","Driveway, both sides and backyard in full color at night. No monthly fee; D-Link PoE+ switch included.","Basic · Basic 2"],
-  ["Tapo cameras — set of 5 + garage cam","Five PoE color night-vision cameras plus the garage camera.","Good"],
-  ["Ring Spotlight Cams, wired — set of 6","Five outdoor + one garage, wired so the picture never drops. Lights snap on at motion.","Better"],
-  ["Ring Elite wired cameras — set of 8","Eight wired Elite cameras covering the whole estate.","Best"],
-  ["Tapo C110 2K garage camera","Keeps an eye on bikes, tools and packages in the garage. No monthly fee.","Basic · Basic 2 · Good"],
-  ["Ring Alarm 8-piece kit","Base station, keypad, 4 door/window contacts, motion detector and range extender.","Basic · Basic 2 · Good"],
-  ["Ring Alarm Pro","Alarm Pro with door/window sensors, armed from your phone.","Better · Best"],
-  ["Extra Ring door/window contacts","Add contacts so the alarm covers every door and window.","Optional in Basic"],
-  ["Ring Floodlight Cam","A camera with bright floodlights over the driveway or backyard — lights snap on at motion and you can talk through it.","Add to any package"],
-  ["Ring Indoor Cam","A small indoor camera for the entry, playroom or a pet check-in.","Add to any package"] ]},
- {name:"Locks & Garage",short:"Locks",sub:"Leave the keys at home — and never wonder if you closed the garage.",items:[
-  ["eufy Smart Lock C220 — front door","Fingerprint, code or app entry. No hub, no hidden key.","Basic"],
-  ["eufy Smart Lock C220 — front + garage entry","Fingerprint locks on both doors you use most.","Basic 2 · Good"],
-  ["Keyless entry — every outside door","Keyless locks across the whole home.","Best"],
-  ["Chamberlain B4613T myQ garage opener","Quiet belt drive with battery backup — open, close and check from your phone.","Basic 2 · Good"],
-  ["WiFi garage opener with camera","Opener with a built-in camera to watch deliveries come in.","Better · Best"],
-  ["Daikin garage mini-split","Cool and heat the garage for workouts and projects, even in a Florida summer.","Better · Best"],
-  ["Keypad lever lock — side & laundry doors","Code entry on the doors guests and cleaners use — no key to hand out, codes you can change anytime.","Add to any package"] ]},
- {name:"Comfort",short:"Comfort",sub:"Set it once — the house follows your schedule, room by room.",items:[
-  ["ecobee Smart Thermostat Essential","Change the temperature from your phone, by voice, or on a schedule.","Basic"],
-  ["Honeywell Home T5 Smart Wi-Fi Thermostat — RTH8800WF2022","Touchscreen Wi-Fi thermostat with a 7-day schedule and geofencing home/away. Works with Alexa, Google and Apple HomeKit. Needs a C-wire — handled on the HVAC side. 2.4 GHz Wi-Fi only.","Basic — option to ecobee Essential"],
-  ["ecobee + 2 SmartSensors","Essential (Basic 2) or Enhanced (Good) with room sensors, so the bedrooms you use stay comfortable.","Basic 2 · Good"],
-  ["ecobee Premium + room sensors","Premium thermostat with sensors for the rooms you're actually in.","Better"],
-  ["ecobee Premium — every zone","A Premium thermostat on every zone of a larger home.","Best"],
-  ["Smart fan switches / fan control","Fan speed and fan light from the wall, the app or Alexa.","Basic 2 · Better · Best"],
-  ["Motorized blinds","Blinds that open and close by tap, voice or schedule.","Better · Best"],
-  ["Smart ceiling fan — living & lanai","A smart fan you run by voice, app or remote — speed and light together.","Add to any package"] ]},
- {name:"Lighting",short:"Lighting",sub:"Porch lights at sunset, movie-night dim — by phone, voice or one scene button.",items:[
-  ["MOES WiFi smart switches — set of 3","Outdoor lights, kitchen and living room on your phone or a schedule.","Basic · Basic 2 · Good"],
-  ["MOES smart dimmers — set of 3","Dim living, dining and main bedroom lights by tap or voice.","Basic 2 · Good"],
-  ["12 smart switches + dimmers","Whole-home smart switching with dimmers where you gather.","Better"],
-  ["Smart lighting — nearly every room","Smart controls throughout the home.","Best"],
-  ["MOES 4-button scene switch + hub","One switch by the door: lights, movie night, goodnight, or all off.","Good · Better · Best"],
-  ["Legrand guide lights","A soft glow built into the switch plate, so you can find your way at night.","Better · Best"],
-  ["Recessed lights — kitchen + living","Clean, flat ceiling lights that brighten the rooms you live in.","Better"],
-  ["Recessed lights — every room","Updated recessed lighting across the whole home.","Best"],
-  ["Under-cabinet LED lighting (~20 ft)","Bright, dimmable light right where you chop and prep.","Good"],
-  ["Under- + above-cabinet lighting","Counter light plus a soft glow above the cabinets, where the layout allows.","Better · Best"],
-  ["Philips Hue color lighting","Color lights in the living room plus a lightstrip behind the TV.","Better"],
-  ["Philips Hue — 3 rooms + strips","Hue color lighting across three rooms, with strips.","Best"],
-  ["Philips Hue landscape spotlights","Color landscape lighting for the front and pool areas.","Best"],
-  ["Philips Hue smart bulbs — set of 4","Color and dimming for lamps and pendants, no new switches needed.","Add to any package"],
-  ["Outdoor string lights on a smart timer","Patio string lights that come on at sunset and off at bedtime, by themselves.","Add to any package"] ]},
- {name:"TV, Sound & Alexa",short:"TV & Sound",sub:"A TV that looks like art, sound you can feel, a screen where it matters.",items:[
-  ["Samsung 65″ The Frame TV","Hangs flat and shows art when it's off. Slim Fit Wall Mount included.","Good"],
-  ["Living-room audio — your choice","Sonos Beam, Polk ceiling + WiiM, Sonos ceiling + Amp, or 2 Era 100s (Good package choice).","Good"],
-  ["LG OLED 75–80″ + Sonos surround","Big OLED picture with Sonos Amp, 2 in-ceiling speakers, sub and 2 Era 100 surrounds.","Better"],
-  ["83″ LG OLED + curated sound","Flagship living-room picture and sound for the estate.","Best"],
-  ["Main bedroom Frame TV + Sonos","A Frame TV that shows art when off, with Sonos Amp and 2 ceiling speakers.","Better · Best"],
-  ["Home theater 7.1 — media room","A real 7.1 theater room, wired before drywall.","Best"],
-  ["Echo Show 8 — kitchen","Recipes, timers, music, the front door — and an intercom to the bedrooms.","All packages"],
-  ["Echo Show 8 — main bedroom","A second smart screen by the bed.","Good"],
-  ["Echo Pop — main bedroom","Small Alexa speaker for alarms, music, lights and camera announcements.","Basic · Basic 2"],
-  ["Echo Show 15 — bedrooms + Show 5 office","Wall screens in every bedroom, plus a Show 5 in the office.","Better"],
-  ["Echo Show 21 — kitchen + living","The largest Echo screens, in the kitchen and living room.","Best"],
-  ["Echo Show 15 — every bedroom","A wall screen in every bedroom of the estate.","Best"],
-  ["Patio audio — 2 speakers + amp","Weatherproof outdoor speakers with their own amplifier.","Better"],
-  ["Patio audio — 4 speakers + sub","Full outdoor sound, including by the pool.","Best"],
-  ["AirPlay speakers — kitchen, dining, bath","Connected speakers, room by room, over AirPlay.","Best"],
-  ["Sonos Arc soundbar","Big TV sound from one bar under the TV — dialogue you can actually hear.","Add to any package"],
-  ["In-ceiling speakers — kitchen & dining (pair)","Music where you cook and eat, with nothing on the counters.","Add to any package"] ]},
- {name:"Power & EV",short:"Power",sub:"Storm-ready: when power or internet goes out, your home stays on.",items:[
-  ["Whole-home surge protector","Installed at the panel to help protect TVs, appliances and smart devices from power spikes.","All packages"],
-  ["Backup internet — eero Signal or T-Mobile 5G","Your choice of one; takes over in a storm or outage and keeps you online.","Good"],
-  ["Backup internet — Starlink or T-Mobile 5G","Satellite or 5G backup, wired into the network.","Better · Best"],
-  ["Generac GP9500E portable generator + 50A inlet","Roll it out, plug into the outdoor inlet, flip the interlock — lights and fridge back on.","Good · Better"],
-  ["EcoFlow DELTA Pro Ultra + Smart Home Panel 2","Battery backup that takes over instantly and silently for key circuits; the generator recharges it.","Better"],
-  ["Generac 26 kW automatic generator","Whole-house standby power that switches on by itself.","Best"],
-  ["Tesla Powerwall 3 (optional)","Peak-hour battery to lower your power bill at peak times.","Optional in Best"],
-  ["EV-ready wiring — garage","Charger wiring in place, so adding a charger later is simple.","Better · Best"],
-  ["Level 2 EV charger — installed","EV-ready wiring plus a Level 2 charger, installed and ready.","Best"],
-  ["Emporia Vue home energy monitor","See what the whole home — and the big circuits — are using, live in an app. Great for spotting a runaway AC or water heater.","Add to any package"],
-  ["EcoFlow DELTA 2 portable power station","A quiet battery box for the fridge, phones and WiFi during an outage — no gas, no fumes, safe indoors.","Add to any package"] ]},
- {name:"Safety & Water",short:"Safety",sub:"The quiet protectors — smoke, CO and water leaks, caught before they cost you.",items:[
-  ["Google Nest Protect — smoke + CO alarm","Smart smoke and carbon-monoxide alarm that speaks, self-tests, and alerts your phone — no 2 AM chirp hunts.","Basic 2 · Good · Better · Best"],
-  ["WiFi water leak sensors","Small sensors under the kitchen sink and at the water heater that alert your phone the moment they get wet.","All packages"],
-  ["RectorSeal Safe-T-Switch","An overflow switch on the AC drain that shuts the system down before condensate water stains a ceiling.","Good · Better · Best"],
-  ["Ring Flood & Freeze Sensor","Sits by the water heater or washer and alerts on water or a freeze risk; ties into your Ring Alarm.","Better · Best"],
-  ["Moen Flo Smart Water Shutoff","Watches the whole home's water line, learns normal use, and can shut the water off by itself when it finds a leak.","Better · Best"],
-  ["Extra leak sensors — every sink & appliance","A sensor at every sink, dishwasher and washer, so no slow leak hides for months.","Add to any package"] ]},
- {name:"Healthy Air",short:"Air",sub:"Cleaner, drier air — handled by the system that already heats and cools your home.",items:[
-  ["REME HALO whole-home air purifier","In-duct air purification that runs with your HVAC system and cleans the air in the whole home.","Good · Better · Best"],
-  ["iWave-R air purifier","A second in-duct option — self-cleaning, with no replacement parts to buy.","Add to any package"],
-  ["AprilAire whole-home dehumidifier","Pulls Florida humidity out of the whole house, so the home feels cooler and mold stays away.","Better · Best"],
-  ["Airthings View Plus air monitor","Tracks radon, CO2, humidity and airborne particles, and shows it all in an app.","Best"],
-  ["Humidity-sensing bath fan switch","Turns the bathroom fan on by itself when shower steam builds up — and off when the air is dry.","Add to any package"] ]},
- {name:"Outdoor & Pool",short:"Outdoor",sub:"The Florida part of the house — pool, patio, sprinklers and landscape, all from your phone.",items:[
-  ["Pentair IntelliCenter pool automation","Pump, heater, lights and water features from your phone — set the schedules once and the pool takes care of itself.","Better · Best"],
-  ["Rachio 3 smart sprinkler controller","Waters by the weather forecast, skips rainy days, and saves water — all from your phone.","Good · Better · Best"],
-  ["Samsung The Terrace outdoor TV","A bright TV built for the patio and lanai — made to be watched in Florida sun.","Better"],
-  ["Low-voltage landscape lighting","Path lights, palm uplights and accent spots on a smart timer — on at dusk, off at bedtime.","Better · Best"],
-  ["Wet-rated outdoor ceiling fan","A lanai fan built for damp Florida air, run from a smart fan switch.","Add to any package"],
-  ["Outdoor smart plugs — holiday & patio","Patio and holiday lights on schedules from your phone.","Add to any package"] ]}
-];
-var state={pkg:null, adds:{}, cat:0, query:""};
-function $(id){return document.getElementById(id)}
-function toast(msg){var t=$("toast");t.textContent=msg;t.classList.add("show");setTimeout(function(){t.classList.remove("show")},2400)}
-function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
-
-/* ---------- Views ---------- */
-document.querySelectorAll("[data-view]").forEach(function(b){
- b.addEventListener("click",function(){
-   document.querySelectorAll("[data-view]").forEach(function(x){x.classList.toggle("on",x===b)});
-   document.querySelectorAll(".view").forEach(function(v){v.classList.toggle("on",v.id==="view-"+b.getAttribute("data-view"))});
-   window.scrollTo({top:0});
- });
-});
-function showView(name){
- document.querySelectorAll("[data-view]").forEach(function(x){x.classList.toggle("on",x.getAttribute("data-view")===name)});
- document.querySelectorAll(".view").forEach(function(v){v.classList.toggle("on",v.id==="view-"+name)});
-}
-
-/* ---------- Packages ---------- */
-$("pkgGrid").innerHTML=PACKAGES.map(function(p){
- return '<article class="pkg'+(p.pop?" pop":"")+'" id="pkg-'+p.id+'">'
- +(p.pop?'<span class="badge-pop">★ Most Popular</span>':"")+(p.lux?'<span class="badge-lux">Luxury</span>':"")
- +'<img class="pkg-img" src="'+PKGIMG[p.id]+'" alt="'+PKGALT[p.id]+'" loading="lazy"/>'
- +'<div class="body"><div class="tier">'+p.tier+'</div><h3>'+p.name+'</h3><p class="for">'+p.for+'</p><span class="count">'+p.count+'</span>'
- +'<p class="bestfor"><b>Decide:</b> '+PKGBEST[p.id]+'</p>'
- +'<div class="spacer"></div>'
- +'<button class="link-btn" type="button" data-details="'+p.id+'">See all items →</button>'
- +'<button class="btn btn-primary pick-btn" type="button" data-pick="'+p.id+'" aria-pressed="false">Choose '+p.tier+'</button></div></article>';
-}).join("");
-document.querySelectorAll("[data-pick]").forEach(function(btn){
- btn.addEventListener("click",function(){
-   var id=btn.getAttribute("data-pick");
-   state.pkg=(state.pkg===id)?null:id;
-   if(state.pkg&&cz.base){cz.base="";cz.removed={};cz.choices={};renderCz();}
-   renderSel();
-   var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];
-   toast(p?("Package added: "+p.tier+" — "+p.name):"Package removed");
- });
-});
-document.querySelectorAll("[data-details]").forEach(function(btn){
- btn.addEventListener("click",function(){openPkgSheet(btn.getAttribute("data-details"))});
-});
-
-/* ---------- Sheet ---------- */
-function openSheet(html){
- $("sheetBody").innerHTML=html;
- $("sheetWrap").classList.add("open");
- $("sheetWrap").setAttribute("aria-hidden","false");
- document.querySelector(".sheet").scrollTop=0;
-}
-function closeSheet(){
- $("sheetWrap").classList.remove("open");
- $("sheetWrap").setAttribute("aria-hidden","true");
-}
-$("sheetBg").addEventListener("click",closeSheet);
-$("sheetClose").addEventListener("click",closeSheet);
-document.addEventListener("keydown",function(e){if(e.key==="Escape")closeSheet();});
-
-/* ---------- Product photo lightbox ---------- */
-var lbPushed=false;
-function openLightbox(src,name,desc){
- if(!src)return;
- $("lbImg").src=src; $("lbImg").alt=name||"";
- $("lbName").textContent=name||"";
- $("lbDesc").textContent=desc||"";
- $("lbDesc").style.display=desc?"":"none";
- var lb=$("lightbox"); lb.classList.add("open"); lb.setAttribute("aria-hidden","false");
- document.body.style.overflow="hidden";
- try{history.pushState({lb:1},"");lbPushed=true;}catch(e){lbPushed=false;}
-}
-function closeLightbox(fromPop){
- var lb=$("lightbox"); if(!lb.classList.contains("open"))return;
- lb.classList.remove("open"); lb.setAttribute("aria-hidden","true");
- document.body.style.overflow="";
- if(lbPushed&&!fromPop){lbPushed=false;try{history.back();}catch(e){}}
- else lbPushed=false;
-}
-$("lightbox").addEventListener("click",function(){closeLightbox(false);});
-window.addEventListener("popstate",function(){closeLightbox(true);});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")closeLightbox(false);});
-/* Any product thumbnail carrying data-zoom opens the lightbox */
-document.addEventListener("click",function(e){
- var t=e.target.closest?e.target.closest("[data-zoom]"):null;
- if(!t)return;
- e.preventDefault(); e.stopPropagation();
- openLightbox(t.getAttribute("data-zoom"),t.getAttribute("data-zoom-name")||"",t.getAttribute("data-zoom-desc")||"");
-});
-
-function pkgHighlights(idx){
- var out=[];
- COMPARE.forEach(function(r){ if(r[idx+1]==="✓") out.push(r[0]); });
- return out;
-}
-function openPkgSheet(id){
- var p=PACKAGES.filter(function(x){return x.id===id})[0];
- var idx=PACKAGES.indexOf(p);
- var on=state.pkg===id;
- var hl=pkgHighlights(idx);
- openSheet(
-  '<div class="tier" style="font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--muted);text-transform:uppercase">'+p.tier+(p.pop?" · ★ Most Popular":"")+(p.lux?" · Luxury":"")+'</div>'
-  +'<h2>'+p.name+'</h2>'
-  +'<p class="sub">'+p.for+' · '+p.count+'</p>'
-  +'<img class="pkg-photo" src="'+PKGIMG[p.id]+'" alt="'+PKGALT[p.id]+'"/>'
-  +'<p class="sub" style="margin-bottom:4px"><b style="color:var(--ink)">Decide:</b> '+PKGBEST[p.id]+'</p>'
-  +'<h3 class="mini">Highlights</h3>'
-  +'<ul class="hl">'+p.bullets.map(function(b){return "<li>"+b+"</li>"}).join("")+'</ul>'
-  +'<h3 class="mini">Everything included</h3>'
-  +'<ul class="items pics">'+p.items.map(function(i){var im=pkgItemImg(i)||PKGIMG[p.id];return '<li><img src="'+im+'" alt="" loading="lazy" data-zoom="'+im+'" data-zoom-name="'+esc(i)+'" data-zoom-desc=""/><span>'+i+"</span></li>"}).join("")+'</ul>'
-  +'<h3 class="mini">What this home can do</h3>'
-  +'<ul class="hl">'+hl.map(function(h){return "<li>"+h+"</li>"}).join("")+'</ul>'
-  +'<button class="btn btn-primary" style="width:100%" type="button" id="sheetPick">'+(on?"✓ Selected — tap to remove":("Choose "+p.tier+" package"))+'</button>'
- );
- $("sheetPick").addEventListener("click",function(){
-   state.pkg=on?null:id; renderSel(); closeSheet();
-   toast(state.pkg?("Package added: "+p.tier+" — "+p.name):"Package removed");
- });
-}
-
-/* ---------- Compare ---------- */
-var head="<thead><tr><th>What your home can do</th>"+PACKAGES.map(function(p){return '<th class="'+(p.pop?"pop":"")+'">'+p.tier+"</th>"}).join("")+"</tr></thead>";
-var body=COMPARE.map(function(r){
- return "<tr><td>"+r[0]+"</td>"+r.slice(1).map(function(v){
-   return '<td class="'+(v==="✓"?"yes":"no")+'">'+v+"</td>"}).join("")+"</tr>"}).join("");
-$("compareTable").innerHTML=head+"<tbody>"+body+"</tbody>";
-
-/* ---------- Products ---------- */
-var BESTFOR=["Best for: streaming, work & school at home","Best for: security & peace of mind","Best for: convenience & security","Best for: comfort, room by room","Best for: mood & everyday ease","Best for: entertainment","Best for: storm readiness","Best for: preventing water damage","Best for: clean, dry air","Best for: pool & patio living"];
-var ICONS=[
- '<svg viewBox="0 0 24 24"><path d="M3.5 10a13 13 0 0 1 17 0M6.5 13.5a8.5 8.5 0 0 1 11 0M9.6 16.8a4.5 4.5 0 0 1 4.8 0"/><circle cx="12" cy="19.6" r="1.3"/></svg>',
- '<svg viewBox="0 0 24 24"><rect x="2.5" y="7" width="13" height="10.5" rx="2"/><path d="M15.5 10.5 21.5 7v10l-6-3.5"/></svg>',
- '<svg viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/><circle cx="12" cy="15.2" r="1.5"/></svg>',
- '<svg viewBox="0 0 24 24"><path d="M10.5 3.5a2 2 0 0 1 4 0v8.7a4.6 4.6 0 1 1-4 0z"/><circle cx="12.5" cy="17.4" r="1.5"/></svg>',
- '<svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 1 3.4 10.9c-.6.5-.9 1-.9 2.1h-5c0-1.1-.3-1.6-.9-2.1A6 6 0 0 1 12 3z"/><path d="M9.5 19h5M10.5 21.5h3"/></svg>',
- '<svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="12" rx="2"/><path d="M9 20.5h6"/></svg>',
- '<svg viewBox="0 0 24 24"><path d="M13 2.5 4.5 14H11l-1.2 7.5L18.5 10H12z"/></svg>',
- '<svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>',
- '<svg viewBox="0 0 24 24"><path d="M4 15c4-1 5-4 5-8 4 0 7 1 9 3-1 5-4 8-9 9-2-1-4-2-5-4z"/><path d="M4 20c2-4 5-7 9-9"/></svg>',
- '<svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="3.4"/><path d="M12 2.5v2M12 13.5v2M2.5 9h2M19.5 9h2M5 16.5c2 1.6 4 1.6 6 0s4-1.6 6 0 3 1.6 4 .8"/></svg>'];
-var P="assets/products/";
-function prodImg(name){
- if(/UniFi Wi-Fi 7/.test(name))return P+"unifi.jpg";
- if(/WiFi 7 — eero Pro 7/.test(name))return P+"eeropro7.jpg";
- if(/eero 6/.test(name))return P+"wifi.jpg";
- if(/Ethernet jacks/.test(name))return P+"ethjack.jpg";
- if(/Structured media panel/.test(name))return P+"mediapanel.jpg";
- if(/Ring 4K Elite doorbell/.test(name))return P+"doorbell-elite.jpg";
- if(/Ring Battery Doorbell/.test(name))return P+"doorbell.jpg";
- if(/Ring Elite wired cameras/.test(name))return P+"ringelite.jpg";
- if(/Ring Spotlight Cams/.test(name))return P+"ringcam.jpg";
- if(/Tapo C110/.test(name))return P+"tapoc110.jpg";
- if(/Tapo/.test(name))return P+"tapo.jpg";
- if(/Ring Alarm Pro/.test(name))return P+"alarmpro.jpg";
- if(/Ring Alarm 8-piece/.test(name))return P+"alarm.jpg";
- if(/Extra Ring door\/window contacts/.test(name))return P+"contacts.jpg";
- if(/eufy Smart Lock C220/.test(name))return P+"lock.jpg";
- if(/Keyless entry/.test(name))return P+"keyless.jpg";
- if(/Chamberlain B4613T/.test(name))return P+"opener.jpg";
- if(/WiFi garage opener with camera/.test(name))return P+"openercam.jpg";
- if(/Daikin garage mini-split/.test(name))return P+"minisplit.jpg";
- if(/Honeywell Home T5|RTH8800WF2022/.test(name))return P+"honeywell-t5.jpg";
- if(/ecobee/.test(name))return P+"thermostat.jpg";
- if(/Smart fan switches/.test(name))return P+"fanswitch.jpg";
- if(/Motorized blinds/.test(name))return P+"blinds.jpg";
- if(/MOES WiFi smart switches/.test(name))return P+"moes-switch.jpg";
- if(/MOES smart dimmers/.test(name))return P+"moes-dimmer.jpg";
- if(/12 smart switches/.test(name))return P+"switches12.jpg";
- if(/Smart lighting — nearly every room/.test(name))return P+"scenelight.jpg";
- if(/MOES 4-button scene switch/.test(name))return P+"scene-switch.jpg";
- if(/Legrand guide lights/.test(name))return P+"guidelight.jpg";
- if(/Recessed lights — kitchen/.test(name))return P+"recessed1.jpg";
- if(/Recessed lights — every room/.test(name))return P+"recessed2.jpg";
- if(/Under-cabinet LED|Under- \+ above-cabinet/.test(name))return "assets/kitchen.jpg";
- if(/Philips Hue landscape/.test(name))return "assets/exterior.jpg";
- if(/Philips Hue/.test(name))return P+"hue.jpg";
- if(/Samsung 65|Frame TV \+ Sonos/.test(name))return P+"frame.jpg";
- if(/LG OLED/.test(name))return P+"oled.jpg";
- if(/Living-room audio/.test(name))return P+"sonos.jpg";
- if(/Home theater 7.1/.test(name))return P+"theater.jpg";
- if(/Echo Show 21/.test(name))return P+"show21.jpg";
- if(/Echo Show 15/.test(name))return P+"show15.jpg";
- if(/Echo Show 8/.test(name))return P+"echo.jpg";
- if(/Echo Pop/.test(name))return P+"echopop.jpg";
- if(/Patio audio/.test(name))return P+"patiospk.jpg";
- if(/AirPlay speakers/.test(name))return P+"homepod.jpg";
- if(/Whole-home surge protector/.test(name))return P+"surge.jpg";
- if(/Backup internet — eero Signal/.test(name))return P+"tmobile.jpg";
- if(/Backup internet — Starlink/.test(name))return P+"starlink.jpg";
- if(/Generac GP9500E/.test(name))return P+"genport.jpg";
- if(/EcoFlow DELTA Pro Ultra/.test(name))return P+"ecoflow.jpg";
- if(/Generac 26 kW/.test(name))return P+"genstandby.jpg";
- if(/Tesla Powerwall 3/.test(name))return P+"powerwall.jpg";
- if(/Level 2 EV charger/.test(name))return P+"evcharger.jpg";
- if(/EV-ready wiring/.test(name))return P+"evready.jpg";
- return null;
-}
-/* Real-photo fallback per category — every product always shows a picture, never an icon tile */
-var CATIMG=[P+"mediapanel.jpg",P+"doorbell.jpg",P+"lock.jpg",P+"thermostat.jpg",P+"hue.jpg",P+"frame.jpg",P+"surge.jpg",P+"alarm.jpg",P+"thermostat.jpg",P+"patiospk.jpg"];
-function catImg(ci,name){return prodImg(name)||CATIMG[ci]}
-/* Match a free-text package item line to a product photo (package sheets + Customize base items) */
-function pkgItemImg(s){
- var t=s.toLowerCase();
- if(/4k elite doorbell/.test(t))return P+"doorbell-elite.jpg";
- if(/ring elite|elite wired cameras/.test(t))return P+"ringelite.jpg";
- if(/doorbell/.test(t))return P+"doorbell.jpg";
- if(/spotlight cam/.test(t))return P+"ringcam.jpg";
- if(/alarm pro/.test(t))return P+"alarmpro.jpg";
- if(/alarm/.test(t))return P+"alarm.jpg";
- if(/contacts/.test(t))return P+"contacts.jpg";
- if(/tapo c110|garage camera/.test(t))return P+"tapoc110.jpg";
- if(/tapo|camera/.test(t))return P+"tapo.jpg";
- if(/eufy|smart lock/.test(t))return P+"lock.jpg";
- if(/keyless/.test(t))return P+"keyless.jpg";
- if(/mini-split/.test(t))return P+"minisplit.jpg";
- if(/garage opener/.test(t))return /camera/.test(t)?P+"openercam.jpg":P+"opener.jpg";
- if(/eero pro 7/.test(t))return P+"eeropro7.jpg";
- if(/unifi|wi-fi 7|wifi 7/.test(t))return P+"unifi.jpg";
- if(/eero/.test(t))return P+"wifi.jpg";
- if(/ethernet/.test(t))return P+"ethjack.jpg";
- if(/media panel|network rack/.test(t))return P+"mediapanel.jpg";
- if(/honeywell|rth8800wf2022/.test(t))return P+"honeywell-t5.jpg";
- if(/ecobee|thermostat/.test(t))return P+"thermostat.jpg";
- if(/fan/.test(t))return P+"fanswitch.jpg";
- if(/blinds/.test(t))return P+"blinds.jpg";
- if(/scene switch/.test(t))return P+"scene-switch.jpg";
- if(/guide light/.test(t))return P+"guidelight.jpg";
- if(/recessed/.test(t))return P+"recessed1.jpg";
- if(/under-/.test(t)||/above-cabinet/.test(t))return "assets/kitchen.jpg";
- if(/hue landscape/.test(t))return "assets/exterior.jpg";
- if(/hue/.test(t))return P+"hue.jpg";
- if(/dimmer/.test(t))return P+"moes-dimmer.jpg";
- if(/smart lighting/.test(t))return P+"scenelight.jpg";
- if(/switch/.test(t))return P+"moes-switch.jpg";
- if(/frame tv|the frame/.test(t))return P+"frame.jpg";
- if(/oled/.test(t))return P+"oled.jpg";
- if(/tcl tv/.test(t))return P+"oled.jpg";
- if(/theater/.test(t))return P+"theater.jpg";
- if(/echo show 21/.test(t))return P+"show21.jpg";
- if(/echo show 15/.test(t))return P+"show15.jpg";
- if(/echo show/.test(t))return P+"echo.jpg";
- if(/echo pop/.test(t))return P+"echopop.jpg";
- if(/airplay/.test(t))return P+"homepod.jpg";
- if(/pool/.test(t))return "assets/pkg-better.jpg";
- if(/patio/.test(t)&&/speaker|audio/.test(t))return P+"patiospk.jpg";
- if(/sonos|audio|speaker/.test(t))return P+"sonos.jpg";
- if(/surge/.test(t))return P+"surge.jpg";
- if(/starlink/.test(t))return P+"starlink.jpg";
- if(/backup internet|t-mobile|signal/.test(t))return P+"tmobile.jpg";
- if(/gp9500e|portable generator/.test(t))return P+"genport.jpg";
- if(/26 kw|standby generator/.test(t))return P+"genstandby.jpg";
- if(/ecoflow/.test(t))return P+"ecoflow.jpg";
- if(/powerwall/.test(t))return P+"powerwall.jpg";
- if(/level 2 charger/.test(t))return P+"evcharger.jpg";
- if(/ev-ready|ev charger/.test(t))return P+"evready.jpg";
- if(/generator/.test(t))return P+"genport.jpg";
- if(/battery/.test(t))return P+"ecoflow.jpg";
- return null;
-}
-$("catChips").innerHTML=CATS.map(function(c,ci){
- return '<button type="button" data-cat="'+ci+'" class="'+(ci===0?"on":"")+'">'+c.short+' ('+c.items.length+')</button>';
-}).join("");
-function setCat(ci){
- state.cat=ci;
- document.querySelectorAll("[data-cat]").forEach(function(x){x.classList.toggle("on",+x.getAttribute("data-cat")===ci)});
- renderProds();
-}
-document.querySelectorAll("[data-cat]").forEach(function(b){
- b.addEventListener("click",function(){setCat(+b.getAttribute("data-cat"));});
-});
-document.querySelectorAll("[data-decide]").forEach(function(b){
- b.addEventListener("click",function(){
-   state.query=""; $("prodSearch").value="";
-   setCat(+b.getAttribute("data-decide"));
-   $("catChips").scrollIntoView({block:"nearest"});
- });
-});
-$("prodSearch").addEventListener("input",function(){ state.query=this.value.trim().toLowerCase(); renderProds(); });
-function prodName(key){var p=key.split("-");return CATS[+p[0]].items[+p[1]][0]}
-function renderProds(){
- var html="", any=false;
- CATS.forEach(function(c,ci){
-   if(state.query==="" && ci!==state.cat) return;
-   c.items.forEach(function(it,ii){
-     var key=ci+"-"+ii;
-     if(state.query && (it[0]+" "+it[1]+" "+BESTFOR[ci]).toLowerCase().indexOf(state.query)<0) return;
-     any=true;
-     var on=!!state.adds[key];
-     var src=catImg(ci,it[0]);
-     var thumb='<button class="prod-photo-btn" type="button" data-zoom="'+src+'" data-zoom-name="'+esc(it[0])+'" data-zoom-desc="'+esc(it[1])+'" aria-label="See a bigger photo of '+esc(it[0])+'"><img class="prod-photo" src="'+src+'" alt="'+esc(it[0])+'" loading="lazy" decoding="async"/><span class="prod-photo-hint">Tap photo to enlarge ⤢</span></button>';
-     html+='<div class="prod'+(on?" added":"")+'">'+thumb
-       +'<div class="info"><h4>'+it[0]+'</h4><p class="desc">'+esc(it[1])+'</p>'
-       +'<div class="tags"><span class="tag best">'+BESTFOR[ci]+'</span><span class="tag inc">Included in: <b>'+it[2]+'</b></span></div>'
-       +'</div>'
-       +'<div class="row"><span class="spacer"></span>'
-       +(on?'<span class="qty show"><button type="button" data-dec="'+key+'" aria-label="One less">−</button><b>'+state.adds[key]+'</b><button type="button" data-inc="'+key+'" aria-label="One more">+</button></span>':"")
-       +'<button class="add-btn'+(on?" added":"")+'" type="button" data-add="'+key+'">'+(on?"✓ Added":"Add")+'</button>'
-       +'</div></div>';
-   });
- });
- if(!any) html='<div class="empty-note">No products match — try a different search.</div>';
- $("prodList").innerHTML=html;
- $("catSub").textContent = state.query ? "Searching all categories." : CATS[state.cat].sub;
- document.querySelectorAll("[data-add]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-add");if(state.adds[k]){delete state.adds[k];}else{state.adds[k]=1;}renderSel();renderProds();})});
- document.querySelectorAll("[data-inc]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-inc");state.adds[k]=(state.adds[k]||1)+1;renderSel();renderProds();})});
- document.querySelectorAll("[data-dec]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-dec");state.adds[k]=(state.adds[k]||1)-1;if(state.adds[k]<1)delete state.adds[k];renderSel();renderProds();})});
-}
-
-/* ---------- My list ---------- */
-function selCount(){return (state.pkg?1:0)+(cz.base?1:0)+Object.keys(state.adds).length}
-function renderSel(){
- PACKAGES.forEach(function(p){
-   var card=$("pkg-"+p.id);var btn=card.querySelector("[data-pick]");var on=state.pkg===p.id;
-   card.classList.toggle("selected",on);btn.setAttribute("aria-pressed",on?"true":"false");
-   btn.textContent=on?"✓ Selected — tap to remove":("Choose "+p.tier);btn.classList.toggle("added",on);
- });
- var n=selCount();
- $("barCount").textContent=n;
- var label="My list is empty";
- if(cz.base){label=cz.base==="scratch"?"Custom — from scratch":("Custom — based on "+czPkg().tier)+(Object.keys(state.adds).length?" + extras":"");}
- else if(state.pkg){var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];label=p.tier+" package"+(Object.keys(state.adds).length?" + extras":"");}
- else if(n) label="Products only — no package";
- $("barLabel").textContent=label;
-}
-function selListHTML(){
- var html="";
- if(cz.base){
-   var cs=czSummary();
-   if(cz.base==="scratch"){html+='<div class="sel-item"><div><b>CUSTOM — BUILT FROM SCRATCH</b><small>Your own build — the products below are the list.</small></div><button class="x2" type="button" data-rm-cz>Remove</button></div>';}
-   else{var cp=czPkg();html+='<div class="sel-item"><div><b>CUSTOM PACKAGE — based on '+cp.tier+" — "+cp.name+'</b><small>'+cs.kept.length+" of "+cp.items.length+" items kept</small>"
-     +(cs.removed.length?("<small>Removed: "+cs.removed.map(function(r){return esc(r)}).join("; ")+"</small>"):"")
-     +(cs.choices.length?("<small>Choices: "+cs.choices.map(function(r){return esc(r)}).join("; ")+"</small>"):"")
-     +'</div><button class="x2" type="button" data-rm-cz>Remove</button></div>';}
- }
- if(state.pkg){var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];
-   html+='<div class="sel-item"><div><b>PACKAGE: '+p.tier+" — "+p.name+'</b><small>'+p.count+" · "+p.for+'</small></div><button class="x2" type="button" data-rm-pkg>Remove</button></div>';}
- Object.keys(state.adds).forEach(function(k){
-   html+='<div class="sel-item"><div>'+esc(prodName(k))+(state.adds[k]>1?(" × "+state.adds[k]):"")+'</div><button class="x2" type="button" data-rm="'+k+'">Remove</button></div>';});
- if(!html)html='<div class="sel-empty">Nothing picked yet — choose a package or add products, then come back here.</div>';
- return html;
-}
-function openListSheet(){
- openSheet(
-  '<h2>My selections</h2>'
-  +'<p class="sub">Nothing is ordered yet — this list goes to Sharma for pricing and confirmation.</p>'
-  +'<div id="sheetSelList">'+selListHTML()+'</div>'
-  +'<form class="client" id="clientForm" onsubmit="return false">'
-  +'<label>Your name *<input id="fName" autocomplete="name" placeholder="Full name"/></label>'
-  +'<label>Phone<input id="fPhone" autocomplete="tel" placeholder="(407) 555-0123"/></label>'
-  +'<label>Email<input id="fEmail" autocomplete="email" placeholder="you@example.com"/></label>'
-  +'<label>Home / community / lot<input id="fHome" placeholder="e.g. Rolling Hills, Lot 12"/></label>'
-  +'<label class="full">Builder (if you have one)<input id="fBuilder" placeholder="Builder or GC name"/></label>'
-  +'<label class="full">Notes<textarea id="fNotes" rows="2" placeholder="Rooms, timing, questions"></textarea></label>'
-  +'</form>'
-  +'<div class="actions">'
-  +'<button class="btn btn-primary" id="btnEmail" type="button">✉ Email my list to Sharma</button>'
-  +'<button class="btn btn-navy" id="btnCopy" type="button">Copy</button>'
-  +'<button class="btn btn-outline" id="btnDownload" type="button">Download</button>'
-  +'<button class="btn btn-outline" id="btnClear" type="button">Clear all</button>'
-  +'</div>'
-  +'<p style="font-size:13px;color:var(--muted);margin-top:10px">Email opens your mail app addressed to <a href="mailto:office@sharmaelectric.com">office@sharmaelectric.com</a> with the list filled in — just press send. Or call <a href="tel:+14078819076">407 881 9076</a>.</p>'
- );
- bindSheetList();
-}
-function bindSheetList(){
- var rp=document.querySelector("[data-rm-pkg]");
- if(rp)rp.addEventListener("click",function(){state.pkg=null;renderSel();refreshSheetList();});
- var rc=document.querySelector("[data-rm-cz]");
- if(rc)rc.addEventListener("click",function(){cz.base="";cz.removed={};cz.choices={};renderCz();renderSel();refreshSheetList();});
- document.querySelectorAll("[data-rm]").forEach(function(b){b.addEventListener("click",function(){delete state.adds[b.getAttribute("data-rm")];renderSel();renderProds();refreshSheetList();});});
- $("btnEmail").addEventListener("click",onEmail);
- $("btnCopy").addEventListener("click",onCopy);
- $("btnDownload").addEventListener("click",onDownload);
- $("btnClear").addEventListener("click",function(){state.pkg=null;state.adds={};cz.base="";cz.removed={};cz.choices={};renderCz();renderSel();renderProds();refreshSheetList();toast("List cleared");});
-}
-function refreshSheetList(){var el=$("sheetSelList");if(el)el.innerHTML=selListHTML();bindSheetList();}
-$("btnOpenList").addEventListener("click",openListSheet);
-
-function buildText(){
- var lines=[];
- lines.push("SHARMA ELECTRIC & HVAC — SMART HOME SELECTIONS");
- lines.push("From: Smart Home Picker (Low Voltage / Builder Smart Home Packet)");
- lines.push("");
- if($("fName").value.trim())lines.push("Name: "+$("fName").value.trim());
- if($("fPhone").value.trim())lines.push("Phone: "+$("fPhone").value.trim());
- if($("fEmail").value.trim())lines.push("Email: "+$("fEmail").value.trim());
- if($("fHome").value.trim())lines.push("Home / community / lot: "+$("fHome").value.trim());
- if($("fBuilder").value.trim())lines.push("Builder: "+$("fBuilder").value.trim());
- lines.push("");
- if(cz.base){
-   var cs2=czSummary();
-   if(cz.base==="scratch"){lines.push("CUSTOM — BUILT FROM SCRATCH");lines.push("The products listed below are the full build.");lines.push("");}
-   else{var cp2=czPkg();lines.push("CUSTOM PACKAGE — based on "+cp2.tier+" — "+cp2.name);lines.push("Items kept ("+cs2.kept.length+" of "+cp2.items.length+"):");cs2.kept.forEach(function(i){lines.push("  • "+i)});
-   if(cs2.removed.length){lines.push("Removed by client:");cs2.removed.forEach(function(i){lines.push("  − "+i)});}
-   if(cs2.choices.length){lines.push("Client choices:");cs2.choices.forEach(function(i){lines.push("  • "+i)});}
-   lines.push("");}
- }
- if(state.pkg){var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];lines.push("PACKAGE: "+p.tier+" — "+p.name+" ("+p.count+")");p.items.forEach(function(i){lines.push("  • "+i)});lines.push("");}
- var keys=Object.keys(state.adds);
- if(keys.length){lines.push("ADDITIONAL PRODUCTS:");keys.forEach(function(k){lines.push("  • "+prodName(k)+(state.adds[k]>1?(" × "+state.adds[k]):""))});lines.push("");}
- if($("fNotes").value.trim()){lines.push("NOTES:");lines.push($("fNotes").value.trim());lines.push("");}
- lines.push("Please price these selections for my home and confirm next steps.");
- return lines.join("\n");
-}
-function onEmail(){
- if(!selCount()){toast("Pick a package or a product first");return;}
- if(!$("fName").value.trim()){toast("Add your name so Sharma knows who this is from");$("fName").focus();return;}
- var subject="Smart Home Selections — "+$("fName").value.trim();
- var a=document.createElement("a");a.href="mailto:office@sharmaelectric.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(buildText());document.body.appendChild(a);a.click();document.body.removeChild(a);
- toast("Opening your email app — just press Send there");
-}
-function onCopy(){
- if(!selCount()){toast("Pick a package or a product first");return;}
- var txt=buildText();
- if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){toast("List copied — paste it anywhere")},function(){fallbackCopy(txt)});}else{fallbackCopy(txt);}
-}
-function fallbackCopy(txt){var ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");toast("List copied")}catch(e){toast("Copy didn't work — use Download instead")}document.body.removeChild(ta);}
-function onDownload(){
- if(!selCount()){toast("Pick a package or a product first");return;}
- var blob=new Blob([buildText()],{type:"text/plain"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="my-smart-home-selections.txt";document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(a.href)},2000);toast("Downloaded your selections list");
-}
-
-/* ---------- Customize ---------- */
-var cz={base:"",removed:{},choices:{}};
-var CZCHOICES=[
- {key:"thermostat-basic",label:"Thermostat — your choice (Smart Start)",pkgs:["basic"],opts:["ecobee Smart Thermostat Essential","Honeywell Home T5 — RTH8800WF2022"]},
- {key:"contacts",label:"Extra Ring door/window contacts (optional in Basic)",pkgs:["basic"],opts:["Standard kit is enough","Add extra contacts"]},
- {key:"audio",label:"Living-room audio — your choice of system",pkgs:["good"],opts:["Sonos Beam","Polk ceiling speakers + WiiM","Sonos ceiling speakers + Amp","2 × Sonos Era 100"]},
- {key:"bnet-good",label:"Backup internet — your choice",pkgs:["good"],opts:["eero Signal","T-Mobile 5G"]},
- {key:"wifi-better",label:"WiFi 7 system — your choice",pkgs:["better"],opts:["eero Pro 7 mesh","UniFi Wi-Fi 7"]},
- {key:"bnet-high",label:"Backup internet — your choice",pkgs:["better","best"],opts:["Starlink","T-Mobile 5G"]},
- {key:"battery",label:"Optional battery (Best)",pkgs:["best"],opts:["Neither","EcoFlow battery","Tesla Powerwall 3"]}
-];
-function czPkg(){return PACKAGES.filter(function(x){return x.id===cz.base})[0]||null}
-function czCatOf(item){
- var s=item.toLowerCase();
- if(/thermostat|ecobee|honeywell/.test(s))return 3;
- if(/smart switches|smart dimmers/.test(s))return 4;
- if(/eero|unifi|wi-fi|wifi|ethernet|media panel|network rack|starlink|signal/.test(s))return 0;
- if(/garage opener|myq|eufy|keyless|smart lock|mini-split/.test(s))return 2;
- if(/doorbell|camera|spotlight|alarm|contacts/.test(s))return 1;
- if(/ecobee|thermostat|fan control|smart fan|smartsensor/.test(s))return 3;
- if(/switch|dimmer|light|recessed|hue|blinds|scene/.test(s))return 4;
- if(/tv|oled|sonos|echo|audio|speaker|theater|airplay/.test(s))return 5;
- return 6;
-}
-function czChoicesFor(id){return CZCHOICES.filter(function(c){return c.pkgs.indexOf(id)>=0})}
-function czSummary(){
- var p=czPkg(),out={kept:[],removed:[],choices:[]};
- if(p){p.items.forEach(function(it){(cz.removed[it]?out.removed:out.kept).push(it)});}
- czChoicesFor(cz.base).forEach(function(c){if(cz.choices[c.key])out.choices.push(c.label.split(" — ")[0].split(" (")[0]+": "+cz.choices[c.key]);});
- return out;
-}
-function renderCzBases(){
- var html='<button type="button" class="base-btn'+(cz.base==="scratch"?" on":"")+'" data-base="scratch"><span class="bb-scratch">START FROM SCRATCH</span><span class="bb-t">From scratch<small>Build your own, item by item</small></span></button>';
- PACKAGES.forEach(function(p){
-   html+='<button type="button" class="base-btn'+(cz.base===p.id?" on":"")+'" data-base="'+p.id+'"><img src="'+PKGIMG[p.id]+'" alt="" loading="lazy"/><span class="bb-t">'+p.tier+" — "+p.name+"<small>"+p.count+"</small></span></button>";
- });
- $("czBases").innerHTML=html;
- document.querySelectorAll("[data-base]").forEach(function(b){b.addEventListener("click",function(){
-   var id=b.getAttribute("data-base");
-   if(cz.base!==id){cz.base=id;cz.removed={};cz.choices={};if(state.pkg){state.pkg=null;}}
-   renderCz();renderSel();
-   toast(id==="scratch"?"Starting from scratch — add products below":("Custom base: "+czPkg().tier+" — now tailor it"));
- });});
-}
-function renderCz(){
- renderCzBases();
- var open={};document.querySelectorAll("#czMain details[data-g]").forEach(function(d){if(d.open)open[d.getAttribute("data-g")]=1});
- var html="";
- if(!cz.base){html='<p class="viewhint" style="margin-top:12px">Pick a starting point above — a package to tailor, or scratch to build your own.</p>';$("czMain").innerHTML=html;return;}
- var p=czPkg();
- if(p){
-   var ch=czChoicesFor(p.id);
-   if(ch.length){
-     html+='<h3 class="cz-h">2 · Your choices</h3><p class="viewhint">Where the packet gives you a choice, pick here — or leave it and Sharma will recommend.</p>';
-     ch.forEach(function(c){
-       html+='<div class="choice-g"><p class="cl">'+c.label+'</p><div class="seg2">'+c.opts.map(function(o){return '<button type="button" data-choice="'+c.key+'" data-opt="'+esc(o)+'" class="'+(cz.choices[c.key]===o?"on":"")+'">'+o+"</button>"}).join("")+"</div></div>";
-     });
-   }
-   html+='<h3 class="cz-h">'+(ch.length?"3":"2")+' · Keep or remove items</h3><p class="viewhint">Tap a group to open it. Remove anything you don\'t want — restore it any time.</p>';
-   var groups={};p.items.forEach(function(it){var g=czCatOf(it);(groups[g]=groups[g]||[]).push(it);});
-   Object.keys(groups).sort().forEach(function(g,gi){
-     var items=groups[g],kept=items.filter(function(it){return !cz.removed[it]}).length;
-     html+='<details class="acc" data-g="i'+g+'"'+(open["i"+g]||(!Object.keys(open).length&&gi===0)?" open":"")+'><summary>'+CATS[+g].name+'<span class="meta">'+kept+" of "+items.length+' kept</span></summary><div class="acc-body">'
-       +items.map(function(it){var off=!!cz.removed[it];var im=pkgItemImg(it)||PKGIMG[p.id];return '<div class="cz-item'+(off?" off":"")+'"><img class="cz-thumb" src="'+im+'" alt="" loading="lazy" data-zoom="'+im+'" data-zoom-name="'+esc(it)+'" data-zoom-desc=""/><span>'+esc(it)+'</span><button type="button" class="cz-tog" data-cz-item="'+esc(it)+'">'+(off?"Restore":"Remove")+"</button></div>"}).join("")
-       +"</div></details>";
-   });
- }
- var stepNo=p?(czChoicesFor(p.id).length?4:3):2;
- html+='<h3 class="cz-h">'+stepNo+' · Add extras</h3><p class="viewhint">Anything from the full catalog, on top of your base.</p>';
- CATS.forEach(function(c,ci){
-   html+='<details class="acc" data-g="x'+ci+'"'+(open["x"+ci]?" open":"")+'><summary>'+c.name+'<span class="meta">'+c.items.length+' products</span></summary><div class="acc-body">'
-     +c.items.map(function(it,ii){var k=ci+"-"+ii,on=!!state.adds[k];return '<div class="cz-xrow"><img class="cz-thumb" src="'+catImg(ci,it[0])+'" alt="" loading="lazy" data-zoom="'+catImg(ci,it[0])+'" data-zoom-name="'+esc(it[0])+'" data-zoom-desc="'+esc(it[1])+'"/><span>'+esc(it[0])+(on&&state.adds[k]>1?(" × "+state.adds[k]):"")+'<small>'+esc(it[1])+'</small></span><button type="button" class="add-btn'+(on?" added":"")+'" data-cz-add="'+k+'">'+(on?"✓ Added":"Add")+"</button></div>"}).join("")
-     +"</div></details>";
- });
- var cs=czSummary(),nAdds=Object.keys(state.adds).length;
- html+='<div class="cz-sum"><b>'+(p?("Custom — based on "+p.tier+" — "+p.name):"Custom — built from scratch")+"</b><br/>"
-   +(p?(cs.kept.length+" of "+p.items.length+" items kept"+(cs.removed.length?(" · Removed: "+cs.removed.length):"")+(cs.choices.length?(" · "+cs.choices.length+" choice"+(cs.choices.length>1?"s":"")+" made"):"")+"<br/>"):"")
-   +(nAdds?nAdds+" extra product"+(nAdds>1?"s":"")+" added<br/>":"")
-   +'When you\'re done, review and send it — Sharma prices the whole custom list for your home.</div>'
-   +'<button class="btn btn-primary" type="button" id="czReview" style="width:100%">Review &amp; send my custom list →</button>';
- $("czMain").innerHTML=html;
- document.querySelectorAll("[data-choice]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-choice"),o=b.getAttribute("data-opt");cz.choices[k]=(cz.choices[k]===o)?"":o;renderCz();renderSel();});});
- document.querySelectorAll("[data-cz-item]").forEach(function(b){b.addEventListener("click",function(){var it=b.getAttribute("data-cz-item");if(cz.removed[it])delete cz.removed[it];else cz.removed[it]=1;renderCz();renderSel();});});
- document.querySelectorAll("[data-cz-add]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-cz-add");if(state.adds[k])delete state.adds[k];else state.adds[k]=1;renderCz();renderSel();renderProds();});});
- $("czReview").addEventListener("click",openListSheet);
-}
-
-/* ---------- Learn / Guide ---------- */
-var GUIDE=[
- {scene:"Strong WiFi in every room",what:"Mesh WiFi units spread around the house, wired to each other behind the walls (that's the “Ethernet backhaul”), so the signal stays strong everywhere — no more dead zones in the back bedroom.",why:["Everything smart in the house runs on this — cameras, locks, TVs and thermostats all need a strong, steady connection.","Wired jacks at the TVs and office are steadier than WiFi for streaming, calls and work.","One neat media panel is where the internet, camera and TV wiring meet."],pkgs:"All five packages"},
- {scene:"See who's there, day or night",what:"Your doorbell and cameras ring right on your phone, and Alexa announces who's there. Cameras watch the driveway, both sides of the house, the backyard and the garage — in full color, even at night.",why:["See, hear and talk to anyone at the front door from anywhere — and see packages left on the mat.","Wired cameras (PoE or hard-wired) mean the picture doesn't drop the way battery WiFi cameras can.","Tapo cameras save video in the camera itself — no monthly fee. Ring plans are optional, paid by you."],pkgs:"All five packages — camera count and type step up by tier"},
- {scene:"Locked and alarmed",what:"Fingerprint locks, an alarm that knows the second a door opens, and a garage you can check and close from your phone. Leave the keys at home.",why:["Open the front door with a fingerprint, a code or the app — no hidden key under the mat.","The alarm covers doors and windows; arm it and get alerts from the app.","“Did I close the garage?” — check it, open or close it from your phone. Higher tiers add a cooled garage, ready for an EV."],pkgs:"All five packages — locks and garage step up by tier"},
- {scene:"Comfort and lights from your phone",what:"A smart thermostat and room sensors keep the rooms you actually use at the right temperature. Set it once — the house follows your schedule.",why:["Change the temperature from your phone, by voice, or on a schedule.","Room sensors stop one hot or cold bedroom making the whole house work harder.","Fan control and motorized blinds (Better and Best) finish the comfort picture."],pkgs:"All five packages — Premium and every-zone control in Better / Best"},
- {scene:"One button sets a whole scene",what:"Smart switches and dimmers put your lights on your phone, on a schedule, or on one scene button by the door: lights, movie night, goodnight, or all off.",why:["Porch lights come on at sunset by themselves; dim the dining room for dinner by voice.","Guide lights give a soft glow at night so nobody stumbles in the dark.","Philips Hue adds color — a lightstrip behind the TV, color rooms, even landscape spotlights in Best."],pkgs:"All five packages — scenes, dimmers and Hue step up by tier"},
- {scene:"Movie night, every night",what:"A TV that looks like art when it's off, sound you can feel, and a smart screen where it matters. Music follows you — even out on the patio.",why:["Samsung The Frame hangs flat and shows art; LG OLED is the movie-night picture in Better and Best.","Sonos fills the living room (and bedroom) with surround sound; patio speakers take music outside.","Echo Show screens handle recipes, timers, the front door camera and room-to-room intercom."],pkgs:"Good and up — full theater room in Best"},
- {scene:"Storm-ready: power and internet",what:"Florida storms knock out power and internet. These keep your home on: surge protection at the panel, backup internet that takes over, and generator or battery power sized to your tier.",why:["A whole-home surge protector helps protect TVs, appliances and every smart device from power spikes.","Backup internet — eero Signal, T-Mobile 5G or Starlink — keeps you online through an outage.","From a portable Generac with a plug-in inlet (Good), to an EcoFlow battery (Better), to a 26 kW Generac that switches on by itself (Best). EV-ready wiring, and a charger installed in Best."],pkgs:"Surge protection in all five — backup power and internet from Good up"},
- {scene:"Caught before it costs you",what:"A pinhole leak or a clogged AC drain can quietly ruin floors and ceilings. These watch the risky spots — under sinks, at the water heater, on the AC drain — and tell your phone the moment something is wrong. Better and Best can even shut the water off by themselves.",why:["Water damage is the most common — and most expensive — surprise in a Florida home.","A smart smoke + CO alarm alerts your phone and tells you which room, instead of just chirping.","The AC drain overflow switch stops condensate water before it stains a ceiling."],pkgs:"Leak sensors in all five — shutoff and full safety in Better / Best"},
- {scene:"Cleaner, drier Florida air",what:"Your HVAC system already moves air through every room. These add purification in the duct, whole-home humidity control, and a monitor that shows what is in your air — so the house feels cooler, smells fresher, and stays ahead of mold.",why:["Florida humidity makes a home feel hotter than it is — pull it out and the AC works less.","In-duct purifiers treat the whole home, not one room at a time.","An air monitor proves what is working — radon, CO2, humidity and particles in one app."],pkgs:"Purifier from Good up — dehumidifier in Better / Best"},
- {scene:"The pool runs itself",what:"Pool pump, heater and lights on schedules from your phone; sprinklers that skip rainy days; landscape lights that come on at dusk. The outside of the house takes care of itself — you just enjoy it.",why:["Pool automation runs the pump at the right hours and keeps the water ready without a weekly scramble.","A smart sprinkler controller waters by the forecast, not a dumb timer — lower water bills.","Outdoor TV, fans and landscape lighting finish the lanai for Florida evenings."],pkgs:"Sprinklers from Good up — pool automation in Better / Best"}
-];
-var GIMG=[
- {src:"assets/learn-wifi.jpg",pos:"center 55%",alt:"An eero mesh WiFi unit on a shelf at home, next to books"},
- {src:"assets/pkg-basic.jpg",pos:"center 40%",alt:"Front of a Florida home — front door and driveway in view"},
- {src:"assets/pkg-basic2.jpg",pos:"center 45%",alt:"Entry home with a wide garage door and front entry"},
- {src:"assets/learn-comfort.jpg",pos:"center 38%",alt:"A smart thermostat showing 72 degrees on the wall of a cozy living room with a fireplace"},
- {src:"assets/pkg-better.jpg",pos:"center 30%",alt:"Patio and pool glowing with warm string lights at dusk"},
- {src:"assets/hero.jpg",pos:"center 36%",alt:"Living room TV wall set up for movie night"},
- {src:"assets/exterior.jpg",pos:"center 58%",alt:"Florida home at dusk with every window lit and the garage in view"},
- {src:"assets/pkg-basic2.jpg",pos:"center 45%",alt:"Entry home front — the doors and water lines the safety sensors watch"},
- {src:"assets/learn-comfort.jpg",pos:"center 38%",alt:"A comfortable living room — the air you breathe, cleaned and dehumidified"},
- {src:"assets/pkg-better.jpg",pos:"center 30%",alt:"Patio and pool at dusk — pool, sprinklers and landscape on autopilot"}];
-var GACC=[
- ["#2563a8","#8fbde9","#fff"],["#c2431f","#f09a7e","#fff"],["#476c7d","#a9c6d2","#fff"],
- ["#2e7d6b","#8fd0bd","#fff"],["#d99a16","#f5b841","#16233a"],["#93365e","#eda3c2","#fff"],
- ["#e86a10","#ffa25e","#fff"],["#b3372f","#eda09b","#fff"],["#3d7a44","#a5d3ab","#16233a"],["#0f7d8c","#8fd0da","#fff"]];
-function gPkgsHTML(s){
- var parts=s.split(" — ");
- return '<p class="g-pkgs"><span class="g-pkgs-l">In packages:</span> <span class="g-pill">'+esc(parts[0])+"</span>"
-  +(parts.length>1?'<span class="g-pkgs-note">— '+esc(parts.slice(1).join(" — "))+"</span>":"")+"</p>";
-}
-$("guideList").innerHTML=GUIDE.map(function(g,ci){
- var prods=CATS[ci].items.map(function(it){
-   var thumb='<img class="g-thumb" src="'+catImg(ci,it[0])+'" alt="'+esc(it[0])+'" loading="lazy" data-zoom="'+catImg(ci,it[0])+'" data-zoom-name="'+esc(it[0])+'" data-zoom-desc="'+esc(it[1])+'"/>';
-   return '<div class="g-prow">'+thumb+'<div class="g-pt"><div class="g-pn">'+esc(it[0])+'</div><div class="g-pr">'+esc(it[1])+"</div></div></div>";
- }).join("");
- var a=GACC[ci];
- return '<details class="g-card" style="--acc:'+a[0]+';--acc-l:'+a[1]+';--acc-ink:'+a[2]+'\">'
-  +'<summary><div class="g-photo"><img src="'+GIMG[ci].src+'" alt="'+GIMG[ci].alt+'" loading="lazy" style="object-position:'+GIMG[ci].pos+'"/>'
-  +'<span class="g-chip" aria-hidden="true">'+ICONS[ci]+'</span>'
-  +'<span class="g-count">'+CATS[ci].items.length+' products</span>'
-  +'<div class="g-titles"><h3>'+CATS[ci].name+'</h3><p>“'+g.scene+'”</p></div>'
-  +'<span class="g-chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9l8 8 8-8"/></svg></span>'
-  +"</div></summary>"
-  +'<div class="g-body"><p class="g-what">'+g.what+"</p>"
-  +'<ul class="g-why">'+g.why.map(function(w){return "<li>"+w+"</li>"}).join("")+"</ul>"
-  +'<h3 class="g-sec">The products, and what each one does</h3>'+prods
-  +gPkgsHTML(g.pkgs)
-  +'<div class="g-actions"><button class="btn btn-navy" type="button" data-shop="'+ci+'">Shop '+CATS[ci].short+'</button><button class="btn btn-outline" type="button" data-gocz="'+ci+'">Customize with this</button></div>'
-  +"</div></details>";
-}).join("");
-document.querySelectorAll("#guideList .g-card").forEach(function(d){
- d.addEventListener("toggle",function(){
-   if(d.open){document.querySelectorAll("#guideList .g-card").forEach(function(o){if(o!==d&&o.open)o.open=false;});}
- });
-});
-document.querySelectorAll("[data-shop]").forEach(function(b){b.addEventListener("click",function(){showView("products");setCat(+b.getAttribute("data-shop"));window.scrollTo({top:0});});});
-document.querySelectorAll("[data-gocz]").forEach(function(b){b.addEventListener("click",function(){showView("customize");window.scrollTo({top:0});toast("Pick a package base, then tailor the "+CATS[+b.getAttribute("data-gocz")].name+" items");});});
-
-renderCz();
-renderProds();
-renderSel();
+<script>var PACKAGES=[{id:"basic",tier:"Basic",name:"Smart Start",for:"For spec and starter homes",count:"14 items + 1 optional",bullets:["Strong WiFi in every room","Tapo color night-vision cameras, no monthly fee","Ring Alarm + fingerprint front-door lock"],items:["eero 6 mesh WiFi, 3 units, Ethernet backhaul","Ethernet jacks — 2 locations","Structured media panel (if needed)","Ring Battery Doorbell, Head-to-Toe video","4 × Tapo C325WB V2 PoE color night-vision cameras (driveway, 2 sides, backyard) on D-Link DGS-1005P PoE+ switch","Tapo C110 2K garage camera","Ring Alarm 8-piece kit","eufy Smart Lock C220 fingerprint lock — front door","Thermostat — your choice: ecobee Smart Thermostat Essential or Honeywell Home T5 Smart Wi-Fi Thermostat (RTH8800WF2022)","3 × MOES WiFi smart switches (outdoor, kitchen, living)","Echo Show 8 (newest) — kitchen","Echo Pop — main bedroom","WiFi water leak sensors — under the kitchen sink + at the water heater","Whole-home surge protector","Optional: extra Ring door/window contacts"]},{id:"basic2",tier:"Basic 2",name:"Smart Start Plus",for:"For starter and entry homes",count:"18 items",bullets:["Faster eero 6+ WiFi, wired the right way","Tapo cameras + Ring Alarm","Fingerprint locks front + garage, myQ garage opener"],items:["eero 6+ mesh WiFi, 3 units, Ethernet backhaul","Ethernet jacks — 4 locations","2 structured media panels","Ring Battery Doorbell, Head-to-Toe video","4 × Tapo C325WB V2 PoE cameras + D-Link PoE+ switch","Tapo C110 2K garage camera","Ring Alarm 8-piece kit","2 × eufy Smart Lock C220 — front + garage entry","Chamberlain B4613T myQ belt-drive garage opener with battery backup","ecobee Essential + 2 SmartSensors","3 × MOES smart switches + 3 × MOES smart dimmers","2 × MOES smart fan switches","Echo Show 8 (newest) — kitchen","Echo Pop — main bedroom","WiFi water leak sensors — under the kitchen sink + at the water heater","Google Nest Protect smart smoke + CO alarm","Whole-home surge protector"]},{id:"good",tier:"Good",name:"Connected Home",for:"For entry and production homes",count:"23 items",bullets:["eero 6+ WiFi + backup internet choice","Six Tapo cameras, Ring Alarm, fingerprint locks","65″ Samsung The Frame TV + under-cabinet lighting"],items:["eero 6+ mesh WiFi, 3 units, Ethernet backhaul","Ethernet jacks — 4 locations","2 structured media panels","Ring Battery Doorbell","5 × Tapo PoE color night-vision cameras + Tapo garage camera","Ring Alarm 8-piece kit","2 × eufy Smart Lock C220 — front + garage entry","Chamberlain B4613T myQ garage opener","ecobee Enhanced + 2 SmartSensors","3 × MOES smart switches + 3 × MOES smart dimmers","MOES 4-button scene switch + Zigbee hub","Samsung 65″ The Frame TV","Living-room audio — your choice of system","Echo Show 8 — kitchen + main bedroom","Under-cabinet LED lighting, kitchen (~20 ft)","Backup internet: eero Signal or T-Mobile 5G (your choice)","Google Nest Protect smart smoke + CO alarm","REME HALO whole-home air purifier (in-duct)","Rachio 3 smart sprinkler controller","Generac GP9500E portable generator + 50A inlet & interlock","Whole-home surge protector"]},{id:"better",tier:"Better",name:"Entertainer",for:"For move-up homes",count:"32 items",pop:!0,bullets:["WiFi 7 (eero Pro 7 or UniFi), wired right","6 Ring Spotlight Cams + Ring Alarm Pro","75–80″ LG OLED + Sonos surround, patio audio"],items:["WiFi 7: eero Pro 7 or UniFi, 4 units, Ethernet backhaul","Ethernet jacks — 6 locations (incl. each TV + office)","Structured media panel","Ring video doorbell","6 × Ring Spotlight Cams, wired (5 outdoor + 1 garage)","Ring Alarm Pro with door/window sensors","Keyless entry — front + garage entry doors","12 smart switches + dimmers (living, dining, main bedroom)","MOES 4-button scene switches, as many as you want","Recessed lights — kitchen + living room","Legrand guide lights — common areas","ecobee Premium + room sensors","Smart fan control — living room","Motorized blinds","75″ or 80″ LG OLED TV + Sonos surround (Amp, 2 in-ceiling, sub, 2 Era 100)","Philips Hue color lighting — living room + TV lightstrip","Main bedroom: Samsung The Frame TV + Sonos Amp & 2 in-ceiling speakers","Echo Show 8 — kitchen (intercom)","Echo Show 15 — every bedroom; Echo Show 5 — office","Under- + above-cabinet lighting","Patio audio: 2 outdoor speakers + amplifier","WiFi garage opener with built-in camera","Daikin garage mini-split","Backup internet: Starlink or T-Mobile 5G (your choice)","EcoFlow DELTA Pro Ultra + Smart Home Panel 2","Generac GP9500E portable generator + 50A inlet","Moen Flo smart water shutoff — whole-home leak protection","Pentair IntelliCenter pool automation","AprilAire whole-home dehumidifier","Samsung The Terrace outdoor TV — patio","EV-ready wiring — garage","Whole-home surge protector"]},{id:"best",tier:"Best",name:"Signature Smart Estate",for:"For luxury and custom homes",count:"36 items + 1 optional",lux:!0,bullets:["UniFi Wi-Fi 7 + network rack","8 wired Ring Elite cameras, 4K doorbell, Alarm Pro","Home theater 7.1, Generac 26 kW standby generator"],items:["UniFi Wi-Fi 7: ceiling, in-wall + outdoor access points","Ethernet to panel, TVs + rooms; network rack","Ring 4K Elite doorbell","8 × Ring Elite wired cameras","Ring Alarm Pro + motion sensors","Keyless entry — every outside door","Philips Hue landscape spotlights","Smart lighting nearly every room + MOES scene switches","Recessed lights — every room","Guide lights — common areas + halls","ecobee Premium — every zone","Fan control — living + bedrooms","Motorized blinds","83″ LG OLED + curated sound — living room","Philips Hue — 3 rooms + lightstrips","Home theater 7.1 — media room","Other bedroom: 50″ TCL TV + speakers","AirPlay connected speakers — kitchen, dining, bath","4 patio speakers + subwoofer","Echo Show 21 — kitchen + living","Echo Show 15 — every bedroom","Under- + above-cabinet lighting","Belt-drive garage opener + camera","Daikin garage mini-split","Generac 26 kW automatic standby generator","Backup internet: Starlink or T-Mobile 5G","EV-ready wiring + Level 2 charger installed","Whole-home surge protector","Moen Flo smart water shutoff — whole-home leak protection","Pentair IntelliCenter pool automation","AprilAire whole-home dehumidifier","Airthings View Plus air quality monitor","Optional: EcoFlow battery / Tesla Powerwall 3"]}],PKGIMG={basic:"assets/pkg-basic.jpg",basic2:"assets/pkg-basic2.jpg",good:"assets/kitchen.jpg",better:"assets/pkg-better.jpg",best:"assets/exterior.jpg"},PKGALT={basic:"Modest single-story Florida starter home in daytime, front door, driveway and garage in view",basic2:"Slightly larger new entry home with a wide garage door across the front and neat palm landscaping",good:"Bright open kitchen flowing into a family living room in a production home",better:"Move-up home at dusk, living area opening to a patio and pool with string lights for entertaining",best:"Luxury Florida estate at dusk with pool palms and landscape lighting glowing"},PKGBEST={basic:"Best if you want the essentials covered — safety, strong WiFi and a smart front door — without overbuilding.",basic2:"Best if you want Basic, plus a smarter garage and dimmers where you live most.",good:"Best if you want a family home that feels connected — a TV that looks like art, more cameras, backup internet.",better:"Best if you entertain — movie-night picture and sound, patio audio, and power backup for storms.",best:"Best if this is a custom or luxury build and you want everything wired in from day one."},COMPARE=null,CATS=null,state={pkg:null,adds:{},cat:0,query:""};function $(id){return document.getElementById(id)}function toast(msg){var t=$("toast");t.textContent=msg,t.classList.add("show"),setTimeout(function(){t.classList.remove("show")},2400)}function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}function showView(name){document.querySelectorAll("[data-view]").forEach(function(x){x.classList.toggle("on",x.getAttribute("data-view")===name)}),document.querySelectorAll(".view").forEach(function(v){v.classList.toggle("on",v.id==="view-"+name)})}document.querySelectorAll("[data-view]").forEach(function(b){b.addEventListener("click",function(){goView(b.getAttribute("data-view"))})});var _dataLoaded={};function loadData(key,src){return _dataLoaded[key]||(_dataLoaded[key]=new Promise(function(res,rej){var sc=document.createElement("script");sc.src=src,sc.onload=function(){res()},sc.onerror=function(){rej(new Error("load "+src))},document.head.appendChild(sc)})),_dataLoaded[key]}var prodsReady=!1,guidesReady=!1,compareDataReady=!1;function ensureProducts(){return prodsReady?Promise.resolve():loadData("products","assets/data-products.js").then(function(){prodsReady=!0,buildChips(),renderProds(),renderCz()})}function ensureGuides(){return guidesReady?Promise.resolve():ensureProducts().then(function(){return loadData("guides","assets/data-guides.js")}).then(function(){guidesReady=!0,buildGuides()})}function ensureCompareData(){return compareDataReady?Promise.resolve():loadData("compare","assets/data-compare.js").then(function(){compareDataReady=!0})}function ensureCompare(){return ensureCompareData().then(function(){buildCompare()})}var viewScroll={},curView="packages";function goView(name){curView!==name&&(viewScroll[curView]=window.scrollY||0),curView=name,showView(name);var v=$("view-"+name);v&&(v.classList.remove("view-enter"),v.offsetWidth,v.classList.add("view-enter")),window.scrollTo(0,viewScroll[name]||0),"products"===name||"customize"===name?ensureProducts():"learn"===name?ensureGuides():"compare"===name&&ensureCompare()}function openSheet(html){$("sheetBody").innerHTML=html;var sh=$("sheet");sh.setAttribute("aria-hidden","false"),window.SK&&SK.openSheet?SK.openSheet(sh):sh.classList.add("is-open");var sb=sh.querySelector(".sk-sheet__body");sb&&(sb.scrollTop=0)}function closeSheet(){var sh=$("sheet");sh&&sh.setAttribute("aria-hidden","true"),window.SK&&SK.closeSheet?SK.closeSheet():sh&&sh.classList.remove("is-open")}$("pkgGrid").innerHTML=PACKAGES.map(function(p){return'<article class="pkg'+(p.pop?" pop":"")+'" id="pkg-'+p.id+'">'+(p.pop?'<span class="badge-pop">★ Most Popular</span>':"")+(p.lux?'<span class="badge-lux">Luxury</span>':"")+'<img class="pkg-img" src="'+PKGIMG[p.id]+'" alt="'+PKGALT[p.id]+'" loading="lazy"/><div class="body"><div class="tier">'+p.tier+"</div><h3>"+p.name+'</h3><p class="for">'+p.for+'</p><span class="count">'+p.count+'</span><p class="bestfor"><b>Decide:</b> '+PKGBEST[p.id]+'</p><div class="spacer"></div><button class="link-btn" type="button" data-details="'+p.id+'">See all items →</button><button class="btn btn-primary pick-btn" type="button" data-pick="'+p.id+'" aria-pressed="false">Choose '+p.tier+"</button></div></article>"}).join(""),document.querySelectorAll("[data-pick]").forEach(function(btn){btn.addEventListener("click",function(){var id=btn.getAttribute("data-pick");state.pkg=state.pkg===id?null:id,state.pkg&&cz.base&&(cz.base="",cz.removed={},cz.choices={},renderCz()),renderSel();var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];toast(p?"Package added: "+p.tier+" — "+p.name:"Package removed")})}),document.querySelectorAll("[data-details]").forEach(function(btn){btn.addEventListener("click",function(){openPkgSheet(btn.getAttribute("data-details"))})}),$("sheetClose").addEventListener("click",closeSheet),document.addEventListener("keydown",function(e){"Escape"===e.key&&closeSheet()});var lbPushed=!1;function openLightbox(src,name,desc){if(src){$("lbImg").src=src,$("lbImg").alt=name||"",$("lbName").textContent=name||"",$("lbDesc").textContent=desc||"",$("lbDesc").style.display=desc?"":"none";var lb=$("lightbox");lb.classList.add("open"),lb.setAttribute("aria-hidden","false"),document.body.style.overflow="hidden";try{history.pushState({lb:1},""),lbPushed=!0}catch(e){lbPushed=!1}}}function closeLightbox(fromPop){var lb=$("lightbox");if(lb.classList.contains("open"))if(lb.classList.remove("open"),lb.setAttribute("aria-hidden","true"),document.body.style.overflow="",lbPushed&&!fromPop){lbPushed=!1;try{history.back()}catch(e){}}else lbPushed=!1}function pkgHighlights(idx){var out=[];return COMPARE.forEach(function(r){"✓"===r[idx+1]&&out.push(r[0])}),out}function openPkgSheet(id){if(COMPARE){var p=PACKAGES.filter(function(x){return x.id===id})[0],idx=PACKAGES.indexOf(p),on=state.pkg===id,hl=pkgHighlights(idx);openSheet('<div class="tier" style="font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--muted);text-transform:uppercase">'+p.tier+(p.pop?" · ★ Most Popular":"")+(p.lux?" · Luxury":"")+"</div><h2>"+p.name+'</h2><p class="sub">'+p.for+" · "+p.count+'</p><img class="pkg-photo" src="'+PKGIMG[p.id]+'" alt="'+PKGALT[p.id]+'"/><p class="sub" style="margin-bottom:4px"><b style="color:var(--ink)">Decide:</b> '+PKGBEST[p.id]+'</p><h3 class="mini">Highlights</h3><ul class="hl">'+p.bullets.map(function(b){return"<li>"+b+"</li>"}).join("")+'</ul><h3 class="mini">Everything included</h3><ul class="items pics">'+p.items.map(function(i){var im=pkgItemImg(i)||PKGIMG[p.id];return'<li><img src="'+im+'" alt="" loading="lazy" data-zoom="'+im+'" data-zoom-name="'+esc(i)+'" data-zoom-desc=""/><span>'+i+"</span></li>"}).join("")+'</ul><h3 class="mini">What this home can do</h3><ul class="hl">'+hl.map(function(h){return"<li>"+h+"</li>"}).join("")+'</ul><button class="btn btn-primary" style="width:100%" type="button" id="sheetPick">'+(on?"✓ Selected — tap to remove":"Choose "+p.tier+" package")+"</button>"),$("sheetPick").addEventListener("click",function(){state.pkg=on?null:id,renderSel(),closeSheet(),toast(state.pkg?"Package added: "+p.tier+" — "+p.name:"Package removed")})}else ensureCompareData().then(function(){openPkgSheet(id)})}$("lightbox").addEventListener("click",function(){closeLightbox(!1)}),window.addEventListener("popstate",function(){closeLightbox(!0)}),document.addEventListener("keydown",function(e){"Escape"===e.key&&closeLightbox(!1)}),document.addEventListener("click",function(e){var t=e.target.closest?e.target.closest("[data-zoom]"):null;t&&(e.preventDefault(),e.stopPropagation(),openLightbox(t.getAttribute("data-zoom"),t.getAttribute("data-zoom-name")||"",t.getAttribute("data-zoom-desc")||""))});var compareBuilt=!1;function buildCompare(){if(!compareBuilt){compareBuilt=!0;var sk=$("compareSkel");sk&&sk.remove();var head="<thead><tr><th>What your home can do</th>"+PACKAGES.map(function(p){return'<th class="'+(p.pop?"pop":"")+'">'+p.tier+"</th>"}).join("")+"</tr></thead>",body=COMPARE.map(function(r){return"<tr><td>"+r[0]+"</td>"+r.slice(1).map(function(v){return'<td class="'+("✓"===v?"yes":"no")+'">'+v+"</td>"}).join("")+"</tr>"}).join("");$("compareTable").innerHTML=head+"<tbody>"+body+"</tbody>"}}var BESTFOR=["Best for: streaming, work & school at home","Best for: security & peace of mind","Best for: convenience & security","Best for: comfort, room by room","Best for: mood & everyday ease","Best for: entertainment","Best for: storm readiness","Best for: preventing water damage","Best for: clean, dry air","Best for: pool & patio living"],ICONS=['<svg viewBox="0 0 24 24"><path d="M3.5 10a13 13 0 0 1 17 0M6.5 13.5a8.5 8.5 0 0 1 11 0M9.6 16.8a4.5 4.5 0 0 1 4.8 0"/><circle cx="12" cy="19.6" r="1.3"/></svg>','<svg viewBox="0 0 24 24"><rect x="2.5" y="7" width="13" height="10.5" rx="2"/><path d="M15.5 10.5 21.5 7v10l-6-3.5"/></svg>','<svg viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/><circle cx="12" cy="15.2" r="1.5"/></svg>','<svg viewBox="0 0 24 24"><path d="M10.5 3.5a2 2 0 0 1 4 0v8.7a4.6 4.6 0 1 1-4 0z"/><circle cx="12.5" cy="17.4" r="1.5"/></svg>','<svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 1 3.4 10.9c-.6.5-.9 1-.9 2.1h-5c0-1.1-.3-1.6-.9-2.1A6 6 0 0 1 12 3z"/><path d="M9.5 19h5M10.5 21.5h3"/></svg>','<svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="12" rx="2"/><path d="M9 20.5h6"/></svg>','<svg viewBox="0 0 24 24"><path d="M13 2.5 4.5 14H11l-1.2 7.5L18.5 10H12z"/></svg>','<svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>','<svg viewBox="0 0 24 24"><path d="M4 15c4-1 5-4 5-8 4 0 7 1 9 3-1 5-4 8-9 9-2-1-4-2-5-4z"/><path d="M4 20c2-4 5-7 9-9"/></svg>','<svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="3.4"/><path d="M12 2.5v2M12 13.5v2M2.5 9h2M19.5 9h2M5 16.5c2 1.6 4 1.6 6 0s4-1.6 6 0 3 1.6 4 .8"/></svg>'],P="assets/products/";function prodImg(name){return/UniFi Wi-Fi 7/.test(name)?P+"unifi.jpg":/WiFi 7 — eero Pro 7/.test(name)?P+"eeropro7.jpg":/eero 6/.test(name)?P+"wifi.jpg":/Ethernet jacks/.test(name)?P+"ethjack.jpg":/Structured media panel/.test(name)?P+"mediapanel.jpg":/Ring 4K Elite doorbell/.test(name)?P+"doorbell-elite.jpg":/Ring Battery Doorbell/.test(name)?P+"doorbell.jpg":/Ring Elite wired cameras/.test(name)?P+"ringelite.jpg":/Ring Spotlight Cams/.test(name)?P+"ringcam.jpg":/Tapo C110/.test(name)?P+"tapoc110.jpg":/Tapo/.test(name)?P+"tapo.jpg":/Ring Alarm Pro/.test(name)?P+"alarmpro.jpg":/Ring Alarm 8-piece/.test(name)?P+"alarm.jpg":/Extra Ring door\/window contacts/.test(name)?P+"contacts.jpg":/eufy Smart Lock C220/.test(name)?P+"lock.jpg":/Keyless entry/.test(name)?P+"keyless.jpg":/Chamberlain B4613T/.test(name)?P+"opener.jpg":/WiFi garage opener with camera/.test(name)?P+"openercam.jpg":/Daikin garage mini-split/.test(name)?P+"minisplit.jpg":/Honeywell Home T5|RTH8800WF2022/.test(name)?P+"honeywell-t5.jpg":/ecobee/.test(name)?P+"thermostat.jpg":/Smart fan switches/.test(name)?P+"fanswitch.jpg":/Motorized blinds/.test(name)?P+"blinds.jpg":/MOES WiFi smart switches/.test(name)?P+"moes-switch.jpg":/MOES smart dimmers/.test(name)?P+"moes-dimmer.jpg":/12 smart switches/.test(name)?P+"switches12.jpg":/Smart lighting — nearly every room/.test(name)?P+"scenelight.jpg":/MOES 4-button scene switch/.test(name)?P+"scene-switch.jpg":/Legrand guide lights/.test(name)?P+"guidelight.jpg":/Recessed lights — kitchen/.test(name)?P+"recessed1.jpg":/Recessed lights — every room/.test(name)?P+"recessed2.jpg":/Under-cabinet LED|Under- \+ above-cabinet/.test(name)?"assets/kitchen.jpg":/Philips Hue landscape/.test(name)?"assets/exterior.jpg":/Philips Hue/.test(name)?P+"hue.jpg":/Samsung 65|Frame TV \+ Sonos/.test(name)?P+"frame.jpg":/LG OLED/.test(name)?P+"oled.jpg":/Living-room audio/.test(name)?P+"sonos.jpg":/Home theater 7.1/.test(name)?P+"theater.jpg":/Echo Show 21/.test(name)?P+"show21.jpg":/Echo Show 15/.test(name)?P+"show15.jpg":/Echo Show 8/.test(name)?P+"echo.jpg":/Echo Pop/.test(name)?P+"echopop.jpg":/Patio audio/.test(name)?P+"patiospk.jpg":/AirPlay speakers/.test(name)?P+"homepod.jpg":/Whole-home surge protector/.test(name)?P+"surge.jpg":/Backup internet — eero Signal/.test(name)?P+"tmobile.jpg":/Backup internet — Starlink/.test(name)?P+"starlink.jpg":/Generac GP9500E/.test(name)?P+"genport.jpg":/EcoFlow DELTA Pro Ultra/.test(name)?P+"ecoflow.jpg":/Generac 26 kW/.test(name)?P+"genstandby.jpg":/Tesla Powerwall 3/.test(name)?P+"powerwall.jpg":/Level 2 EV charger/.test(name)?P+"evcharger.jpg":/EV-ready wiring/.test(name)?P+"evready.jpg":null}var CATIMG=[P+"mediapanel.jpg",P+"doorbell.jpg",P+"lock.jpg",P+"thermostat.jpg",P+"hue.jpg",P+"frame.jpg",P+"surge.jpg",P+"alarm.jpg",P+"thermostat.jpg",P+"patiospk.jpg"];function catImg(ci,name){return prodImg(name)||CATIMG[ci]}function pkgItemImg(s){var t=s.toLowerCase();return/4k elite doorbell/.test(t)?P+"doorbell-elite.jpg":/ring elite|elite wired cameras/.test(t)?P+"ringelite.jpg":/doorbell/.test(t)?P+"doorbell.jpg":/spotlight cam/.test(t)?P+"ringcam.jpg":/alarm pro/.test(t)?P+"alarmpro.jpg":/alarm/.test(t)?P+"alarm.jpg":/contacts/.test(t)?P+"contacts.jpg":/tapo c110|garage camera/.test(t)?P+"tapoc110.jpg":/tapo|camera/.test(t)?P+"tapo.jpg":/eufy|smart lock/.test(t)?P+"lock.jpg":/keyless/.test(t)?P+"keyless.jpg":/mini-split/.test(t)?P+"minisplit.jpg":/garage opener/.test(t)?/camera/.test(t)?P+"openercam.jpg":P+"opener.jpg":/eero pro 7/.test(t)?P+"eeropro7.jpg":/unifi|wi-fi 7|wifi 7/.test(t)?P+"unifi.jpg":/eero/.test(t)?P+"wifi.jpg":/ethernet/.test(t)?P+"ethjack.jpg":/media panel|network rack/.test(t)?P+"mediapanel.jpg":/honeywell|rth8800wf2022/.test(t)?P+"honeywell-t5.jpg":/ecobee|thermostat/.test(t)?P+"thermostat.jpg":/fan/.test(t)?P+"fanswitch.jpg":/blinds/.test(t)?P+"blinds.jpg":/scene switch/.test(t)?P+"scene-switch.jpg":/guide light/.test(t)?P+"guidelight.jpg":/recessed/.test(t)?P+"recessed1.jpg":/under-/.test(t)||/above-cabinet/.test(t)?"assets/kitchen.jpg":/hue landscape/.test(t)?"assets/exterior.jpg":/hue/.test(t)?P+"hue.jpg":/dimmer/.test(t)?P+"moes-dimmer.jpg":/smart lighting/.test(t)?P+"scenelight.jpg":/switch/.test(t)?P+"moes-switch.jpg":/frame tv|the frame/.test(t)?P+"frame.jpg":/oled/.test(t)||/tcl tv/.test(t)?P+"oled.jpg":/theater/.test(t)?P+"theater.jpg":/echo show 21/.test(t)?P+"show21.jpg":/echo show 15/.test(t)?P+"show15.jpg":/echo show/.test(t)?P+"echo.jpg":/echo pop/.test(t)?P+"echopop.jpg":/airplay/.test(t)?P+"homepod.jpg":/pool/.test(t)?"assets/pkg-better.jpg":/patio/.test(t)&&/speaker|audio/.test(t)?P+"patiospk.jpg":/sonos|audio|speaker/.test(t)?P+"sonos.jpg":/surge/.test(t)?P+"surge.jpg":/starlink/.test(t)?P+"starlink.jpg":/backup internet|t-mobile|signal/.test(t)?P+"tmobile.jpg":/gp9500e|portable generator/.test(t)?P+"genport.jpg":/26 kw|standby generator/.test(t)?P+"genstandby.jpg":/ecoflow/.test(t)?P+"ecoflow.jpg":/powerwall/.test(t)?P+"powerwall.jpg":/level 2 charger/.test(t)?P+"evcharger.jpg":/ev-ready|ev charger/.test(t)?P+"evready.jpg":/generator/.test(t)?P+"genport.jpg":/battery/.test(t)?P+"ecoflow.jpg":null}var chipsBuilt=!1;function buildChips(){chipsBuilt||(chipsBuilt=!0,$("catChips").innerHTML=CATS.map(function(c,ci){return'<button type="button" data-cat="'+ci+'" class="'+(0===ci?"on":"")+'">'+c.short+" ("+c.items.length+")</button>"}).join(""),document.querySelectorAll("[data-cat]").forEach(function(b){b.addEventListener("click",function(){setCat(+b.getAttribute("data-cat"))})}))}function setCat(ci){CATS&&(state.cat=ci,document.querySelectorAll("[data-cat]").forEach(function(x){x.classList.toggle("on",+x.getAttribute("data-cat")===ci)}),renderProds())}function prodName(key){var p=key.split("-");return CATS[+p[0]].items[+p[1]][0]}function renderProds(){if(CATS){var html="",any=!1;CATS.forEach(function(c,ci){""===state.query&&ci!==state.cat||c.items.forEach(function(it,ii){var key=ci+"-"+ii;if(!(state.query&&(it[0]+" "+it[1]+" "+BESTFOR[ci]).toLowerCase().indexOf(state.query)<0)){any=!0;var on=!!state.adds[key],src=catImg(ci,it[0]),thumb='<button class="prod-photo-btn" type="button" data-zoom="'+src+'" data-zoom-name="'+esc(it[0])+'" data-zoom-desc="'+esc(it[1])+'" aria-label="See a bigger photo of '+esc(it[0])+'"><img class="prod-photo" src="'+src+'" alt="'+esc(it[0])+'" loading="lazy" decoding="async"/><span class="prod-photo-hint">Tap photo to enlarge ⤢</span></button>';html+='<div class="prod'+(on?" added":"")+'">'+thumb+'<div class="info"><h4>'+it[0]+'</h4><p class="desc">'+esc(it[1])+'</p><div class="tags"><span class="tag best">'+BESTFOR[ci]+'</span><span class="tag inc">Included in: <b>'+it[2]+'</b></span></div></div><div class="row"><span class="spacer"></span>'+(on?'<span class="qty show"><button type="button" data-dec="'+key+'" aria-label="One less">−</button><b>'+state.adds[key]+'</b><button type="button" data-inc="'+key+'" aria-label="One more">+</button></span>':"")+'<button class="add-btn'+(on?" added":"")+'" type="button" data-add="'+key+'">'+(on?"✓ Added":"Add")+"</button></div></div>"}})}),any||(html='<div class="empty-note">No products match — try a different search.</div>'),$("prodList").innerHTML=html,$("catSub").textContent=state.query?"Searching all categories.":CATS[state.cat].sub,document.querySelectorAll("[data-add]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-add");state.adds[k]?delete state.adds[k]:state.adds[k]=1,renderSel(),renderProds()})}),document.querySelectorAll("[data-inc]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-inc");state.adds[k]=(state.adds[k]||1)+1,renderSel(),renderProds()})}),document.querySelectorAll("[data-dec]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-dec");state.adds[k]=(state.adds[k]||1)-1,state.adds[k]<1&&delete state.adds[k],renderSel(),renderProds()})})}}function selCount(){return(state.pkg?1:0)+(cz.base?1:0)+Object.keys(state.adds).length}function renderSel(){PACKAGES.forEach(function(p){var card=$("pkg-"+p.id),btn=card.querySelector("[data-pick]"),on=state.pkg===p.id;card.classList.toggle("selected",on),btn.setAttribute("aria-pressed",on?"true":"false"),btn.textContent=on?"✓ Selected — tap to remove":"Choose "+p.tier,btn.classList.toggle("added",on)});var n=selCount();$("barCount").textContent=n;var label="My list is empty";if(cz.base)label="scratch"===cz.base?"Custom — from scratch":"Custom — based on "+czPkg().tier+(Object.keys(state.adds).length?" + extras":"");else if(state.pkg){label=PACKAGES.filter(function(x){return x.id===state.pkg})[0].tier+" package"+(Object.keys(state.adds).length?" + extras":"")}else n&&(label="Products only — no package");$("barLabel").textContent=label}function selListHTML(){var html="";if(cz.base){var cs=czSummary();if("scratch"===cz.base)html+='<div class="sel-item"><div><b>CUSTOM — BUILT FROM SCRATCH</b><small>Your own build — the products below are the list.</small></div><button class="x2" type="button" data-rm-cz>Remove</button></div>';else{var cp=czPkg();html+='<div class="sel-item"><div><b>CUSTOM PACKAGE — based on '+cp.tier+" — "+cp.name+"</b><small>"+cs.kept.length+" of "+cp.items.length+" items kept</small>"+(cs.removed.length?"<small>Removed: "+cs.removed.map(function(r){return esc(r)}).join("; ")+"</small>":"")+(cs.choices.length?"<small>Choices: "+cs.choices.map(function(r){return esc(r)}).join("; ")+"</small>":"")+'</div><button class="x2" type="button" data-rm-cz>Remove</button></div>'}}if(state.pkg){var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];html+='<div class="sel-item"><div><b>PACKAGE: '+p.tier+" — "+p.name+"</b><small>"+p.count+" · "+p.for+'</small></div><button class="x2" type="button" data-rm-pkg>Remove</button></div>'}return Object.keys(state.adds).forEach(function(k){html+='<div class="sel-item"><div>'+esc(prodName(k))+(state.adds[k]>1?" × "+state.adds[k]:"")+'</div><button class="x2" type="button" data-rm="'+k+'">Remove</button></div>'}),html||(html='<div class="sel-empty">Nothing picked yet — choose a package or add products, then come back here.</div>'),html}function openListSheet(){openSheet('<h2>My selections</h2><p class="sub">Nothing is ordered yet — this list goes to Sharma for pricing and confirmation.</p><div id="sheetSelList">'+selListHTML()+'</div><form class="client" id="clientForm" onsubmit="return false"><label>Your name *<input id="fName" autocomplete="name" placeholder="Full name"/></label><label>Phone<input id="fPhone" autocomplete="tel" placeholder="(407) 555-0123"/></label><label>Email<input id="fEmail" autocomplete="email" placeholder="you@example.com"/></label><label>Home / community / lot<input id="fHome" placeholder="e.g. Rolling Hills, Lot 12"/></label><label class="full">Builder (if you have one)<input id="fBuilder" placeholder="Builder or GC name"/></label><label class="full">Notes<textarea id="fNotes" rows="2" placeholder="Rooms, timing, questions"></textarea></label></form><div class="actions"><button class="btn btn-primary" id="btnEmail" type="button">✉ Email my list to Sharma</button><button class="btn btn-navy" id="btnCopy" type="button">Copy</button><button class="btn btn-outline" id="btnDownload" type="button">Download</button><button class="btn btn-outline" id="btnClear" type="button">Clear all</button></div><p style="font-size:13px;color:var(--muted);margin-top:10px">Email opens your mail app addressed to <a href="mailto:office@sharmaelectric.com">office@sharmaelectric.com</a> with the list filled in — just press send. Or call <a href="tel:+14078819076">407 881 9076</a>.</p>'),bindSheetList()}function bindSheetList(){var rp=document.querySelector("[data-rm-pkg]");rp&&rp.addEventListener("click",function(){state.pkg=null,renderSel(),refreshSheetList()});var rc=document.querySelector("[data-rm-cz]");rc&&rc.addEventListener("click",function(){cz.base="",cz.removed={},cz.choices={},renderCz(),renderSel(),refreshSheetList()}),document.querySelectorAll("[data-rm]").forEach(function(b){b.addEventListener("click",function(){delete state.adds[b.getAttribute("data-rm")],renderSel(),renderProds(),refreshSheetList()})}),$("btnEmail").addEventListener("click",onEmail),$("btnCopy").addEventListener("click",onCopy),$("btnDownload").addEventListener("click",onDownload),$("btnClear").addEventListener("click",function(){state.pkg=null,state.adds={},cz.base="",cz.removed={},cz.choices={},renderCz(),renderSel(),renderProds(),refreshSheetList(),toast("List cleared")})}function refreshSheetList(){var el=$("sheetSelList");el&&(el.innerHTML=selListHTML()),bindSheetList()}function buildText(){var lines=[];if(lines.push("SHARMA ELECTRIC & HVAC — SMART HOME SELECTIONS"),lines.push("From: Smart Home Picker (Low Voltage / Builder Smart Home Packet)"),lines.push(""),$("fName").value.trim()&&lines.push("Name: "+$("fName").value.trim()),$("fPhone").value.trim()&&lines.push("Phone: "+$("fPhone").value.trim()),$("fEmail").value.trim()&&lines.push("Email: "+$("fEmail").value.trim()),$("fHome").value.trim()&&lines.push("Home / community / lot: "+$("fHome").value.trim()),$("fBuilder").value.trim()&&lines.push("Builder: "+$("fBuilder").value.trim()),lines.push(""),cz.base){var cs2=czSummary();if("scratch"===cz.base)lines.push("CUSTOM — BUILT FROM SCRATCH"),lines.push("The products listed below are the full build."),lines.push("");else{var cp2=czPkg();lines.push("CUSTOM PACKAGE — based on "+cp2.tier+" — "+cp2.name),lines.push("Items kept ("+cs2.kept.length+" of "+cp2.items.length+"):"),cs2.kept.forEach(function(i){lines.push("  • "+i)}),cs2.removed.length&&(lines.push("Removed by client:"),cs2.removed.forEach(function(i){lines.push("  − "+i)})),cs2.choices.length&&(lines.push("Client choices:"),cs2.choices.forEach(function(i){lines.push("  • "+i)})),lines.push("")}}if(state.pkg){var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];lines.push("PACKAGE: "+p.tier+" — "+p.name+" ("+p.count+")"),p.items.forEach(function(i){lines.push("  • "+i)}),lines.push("")}var keys=Object.keys(state.adds);return keys.length&&(lines.push("ADDITIONAL PRODUCTS:"),keys.forEach(function(k){lines.push("  • "+prodName(k)+(state.adds[k]>1?" × "+state.adds[k]:""))}),lines.push("")),$("fNotes").value.trim()&&(lines.push("NOTES:"),lines.push($("fNotes").value.trim()),lines.push("")),lines.push("Please price these selections for my home and confirm next steps."),lines.join("\n")}function onEmail(){if(selCount()){if(!$("fName").value.trim())return toast("Add your name so Sharma knows who this is from"),void $("fName").focus();var subject="Smart Home Selections — "+$("fName").value.trim(),a=document.createElement("a");a.href="mailto:office@sharmaelectric.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(buildText()),document.body.appendChild(a),a.click(),document.body.removeChild(a),toast("Opening your email app — just press Send there")}else toast("Pick a package or a product first")}function onCopy(){if(selCount()){var txt=buildText();navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(txt).then(function(){toast("List copied — paste it anywhere")},function(){fallbackCopy(txt)}):fallbackCopy(txt)}else toast("Pick a package or a product first")}function fallbackCopy(txt){var ta=document.createElement("textarea");ta.value=txt,document.body.appendChild(ta),ta.select();try{document.execCommand("copy"),toast("List copied")}catch(e){toast("Copy didn't work — use Download instead")}document.body.removeChild(ta)}function onDownload(){if(selCount()){var blob=new Blob([buildText()],{type:"text/plain"}),a=document.createElement("a");a.href=URL.createObjectURL(blob),a.download="my-smart-home-selections.txt",document.body.appendChild(a),a.click(),document.body.removeChild(a),setTimeout(function(){URL.revokeObjectURL(a.href)},2e3),toast("Downloaded your selections list")}else toast("Pick a package or a product first")}document.querySelectorAll("[data-decide]").forEach(function(b){b.addEventListener("click",function(){state.query="",$("prodSearch").value="",setCat(+b.getAttribute("data-decide")),$("catChips").scrollIntoView({block:"nearest"})})}),$("prodSearch").addEventListener("input",function(){state.query=this.value.trim().toLowerCase(),renderProds()}),$("btnOpenList").addEventListener("click",openListSheet);var cz={base:"",removed:{},choices:{}},CZCHOICES=[{key:"thermostat-basic",label:"Thermostat — your choice (Smart Start)",pkgs:["basic"],opts:["ecobee Smart Thermostat Essential","Honeywell Home T5 — RTH8800WF2022"]},{key:"contacts",label:"Extra Ring door/window contacts (optional in Basic)",pkgs:["basic"],opts:["Standard kit is enough","Add extra contacts"]},{key:"audio",label:"Living-room audio — your choice of system",pkgs:["good"],opts:["Sonos Beam","Polk ceiling speakers + WiiM","Sonos ceiling speakers + Amp","2 × Sonos Era 100"]},{key:"bnet-good",label:"Backup internet — your choice",pkgs:["good"],opts:["eero Signal","T-Mobile 5G"]},{key:"wifi-better",label:"WiFi 7 system — your choice",pkgs:["better"],opts:["eero Pro 7 mesh","UniFi Wi-Fi 7"]},{key:"bnet-high",label:"Backup internet — your choice",pkgs:["better","best"],opts:["Starlink","T-Mobile 5G"]},{key:"battery",label:"Optional battery (Best)",pkgs:["best"],opts:["Neither","EcoFlow battery","Tesla Powerwall 3"]}];function czPkg(){return PACKAGES.filter(function(x){return x.id===cz.base})[0]||null}function czCatOf(item){var s=item.toLowerCase();return/thermostat|ecobee|honeywell/.test(s)?3:/smart switches|smart dimmers/.test(s)?4:/eero|unifi|wi-fi|wifi|ethernet|media panel|network rack|starlink|signal/.test(s)?0:/garage opener|myq|eufy|keyless|smart lock|mini-split/.test(s)?2:/doorbell|camera|spotlight|alarm|contacts/.test(s)?1:/ecobee|thermostat|fan control|smart fan|smartsensor/.test(s)?3:/switch|dimmer|light|recessed|hue|blinds|scene/.test(s)?4:/tv|oled|sonos|echo|audio|speaker|theater|airplay/.test(s)?5:6}function czChoicesFor(id){return CZCHOICES.filter(function(c){return c.pkgs.indexOf(id)>=0})}function czSummary(){var p=czPkg(),out={kept:[],removed:[],choices:[]};return p&&p.items.forEach(function(it){(cz.removed[it]?out.removed:out.kept).push(it)}),czChoicesFor(cz.base).forEach(function(c){cz.choices[c.key]&&out.choices.push(c.label.split(" — ")[0].split(" (")[0]+": "+cz.choices[c.key])}),out}function renderCzBases(){var html='<button type="button" class="base-btn'+("scratch"===cz.base?" on":"")+'" data-base="scratch"><span class="bb-scratch">START FROM SCRATCH</span><span class="bb-t">From scratch<small>Build your own, item by item</small></span></button>';PACKAGES.forEach(function(p){html+='<button type="button" class="base-btn'+(cz.base===p.id?" on":"")+'" data-base="'+p.id+'"><img src="'+PKGIMG[p.id]+'" alt="" loading="lazy"/><span class="bb-t">'+p.tier+" — "+p.name+"<small>"+p.count+"</small></span></button>"}),$("czBases").innerHTML=html,document.querySelectorAll("[data-base]").forEach(function(b){b.addEventListener("click",function(){var id=b.getAttribute("data-base");cz.base!==id&&(cz.base=id,cz.removed={},cz.choices={},state.pkg&&(state.pkg=null)),renderCz(),renderSel(),toast("scratch"===id?"Starting from scratch — add products below":"Custom base: "+czPkg().tier+" — now tailor it")})})}function renderCz(){if(CATS){renderCzBases();var open={};document.querySelectorAll("#czMain details[data-g]").forEach(function(d){d.open&&(open[d.getAttribute("data-g")]=1)});var html="";if(!cz.base)return html='<p class="viewhint" style="margin-top:12px">Pick a starting point above — a package to tailor, or scratch to build your own.</p>',void($("czMain").innerHTML=html);var p=czPkg();if(p){var ch=czChoicesFor(p.id);ch.length&&(html+='<h3 class="cz-h">2 · Your choices</h3><p class="viewhint">Where the packet gives you a choice, pick here — or leave it and Sharma will recommend.</p>',ch.forEach(function(c){html+='<div class="choice-g"><p class="cl">'+c.label+'</p><div class="seg2">'+c.opts.map(function(o){return'<button type="button" data-choice="'+c.key+'" data-opt="'+esc(o)+'" class="'+(cz.choices[c.key]===o?"on":"")+'">'+o+"</button>"}).join("")+"</div></div>"})),html+='<h3 class="cz-h">'+(ch.length?"3":"2")+' · Keep or remove items</h3><p class="viewhint">Tap a group to open it. Remove anything you don\'t want — restore it any time.</p>';var groups={};p.items.forEach(function(it){var g=czCatOf(it);(groups[g]=groups[g]||[]).push(it)}),Object.keys(groups).sort().forEach(function(g,gi){var items=groups[g],kept=items.filter(function(it){return!cz.removed[it]}).length;html+='<details class="acc" data-g="i'+g+'"'+(open["i"+g]||!Object.keys(open).length&&0===gi?" open":"")+"><summary>"+CATS[+g].name+'<span class="meta">'+kept+" of "+items.length+' kept</span></summary><div class="acc-body">'+items.map(function(it){var off=!!cz.removed[it],im=pkgItemImg(it)||PKGIMG[p.id];return'<div class="cz-item'+(off?" off":"")+'"><img class="cz-thumb" src="'+im+'" alt="" loading="lazy" data-zoom="'+im+'" data-zoom-name="'+esc(it)+'" data-zoom-desc=""/><span>'+esc(it)+'</span><button type="button" class="cz-tog" data-cz-item="'+esc(it)+'">'+(off?"Restore":"Remove")+"</button></div>"}).join("")+"</div></details>"})}var stepNo=p?czChoicesFor(p.id).length?4:3:2;html+='<h3 class="cz-h">'+stepNo+' · Add extras</h3><p class="viewhint">Anything from the full catalog, on top of your base.</p>',CATS.forEach(function(c,ci){html+='<details class="acc" data-g="x'+ci+'"'+(open["x"+ci]?" open":"")+"><summary>"+c.name+'<span class="meta">'+c.items.length+' products</span></summary><div class="acc-body">'+c.items.map(function(it,ii){var k=ci+"-"+ii,on=!!state.adds[k];return'<div class="cz-xrow"><img class="cz-thumb" src="'+catImg(ci,it[0])+'" alt="" loading="lazy" data-zoom="'+catImg(ci,it[0])+'" data-zoom-name="'+esc(it[0])+'" data-zoom-desc="'+esc(it[1])+'"/><span>'+esc(it[0])+(on&&state.adds[k]>1?" × "+state.adds[k]:"")+"<small>"+esc(it[1])+'</small></span><button type="button" class="add-btn'+(on?" added":"")+'" data-cz-add="'+k+'">'+(on?"✓ Added":"Add")+"</button></div>"}).join("")+"</div></details>"});var cs=czSummary(),nAdds=Object.keys(state.adds).length;html+='<div class="cz-sum"><b>'+(p?"Custom — based on "+p.tier+" — "+p.name:"Custom — built from scratch")+"</b><br/>"+(p?cs.kept.length+" of "+p.items.length+" items kept"+(cs.removed.length?" · Removed: "+cs.removed.length:"")+(cs.choices.length?" · "+cs.choices.length+" choice"+(cs.choices.length>1?"s":"")+" made":"")+"<br/>":"")+(nAdds?nAdds+" extra product"+(nAdds>1?"s":"")+" added<br/>":"")+'When you\'re done, review and send it — Sharma prices the whole custom list for your home.</div><button class="btn btn-primary" type="button" id="czReview" style="width:100%">Review &amp; send my custom list →</button>',$("czMain").innerHTML=html,document.querySelectorAll("[data-choice]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-choice"),o=b.getAttribute("data-opt");cz.choices[k]=cz.choices[k]===o?"":o,renderCz(),renderSel()})}),document.querySelectorAll("[data-cz-item]").forEach(function(b){b.addEventListener("click",function(){var it=b.getAttribute("data-cz-item");cz.removed[it]?delete cz.removed[it]:cz.removed[it]=1,renderCz(),renderSel()})}),document.querySelectorAll("[data-cz-add]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-cz-add");state.adds[k]?delete state.adds[k]:state.adds[k]=1,renderCz(),renderSel(),renderProds()})}),$("czReview").addEventListener("click",openListSheet)}}var GUIDE=null,GIMG=null,GACC=null;function gPkgsHTML(s){var parts=s.split(" — ");return'<p class="g-pkgs"><span class="g-pkgs-l">In packages:</span> <span class="g-pill">'+esc(parts[0])+"</span>"+(parts.length>1?'<span class="g-pkgs-note">— '+esc(parts.slice(1).join(" — "))+"</span>":"")+"</p>"}function buildGuides(){$("guideList").innerHTML=GUIDE.map(function(g,ci){var prods=CATS[ci].items.map(function(it){return'<div class="g-prow">'+('<img class="g-thumb" src="'+catImg(ci,it[0])+'" alt="'+esc(it[0])+'" loading="lazy" data-zoom="'+catImg(ci,it[0])+'" data-zoom-name="'+esc(it[0])+'" data-zoom-desc="'+esc(it[1])+'"/>')+'<div class="g-pt"><div class="g-pn">'+esc(it[0])+'</div><div class="g-pr">'+esc(it[1])+"</div></div></div>"}).join(""),a=GACC[ci];return'<details class="g-card" style="--acc:'+a[0]+";--acc-l:"+a[1]+";--acc-ink:"+a[2]+'"><summary><div class="g-photo"><img src="'+GIMG[ci].src+'" alt="'+GIMG[ci].alt+'" loading="lazy" style="object-position:'+GIMG[ci].pos+'"/><span class="g-chip" aria-hidden="true">'+ICONS[ci]+'</span><span class="g-count">'+CATS[ci].items.length+' products</span><div class="g-titles"><h3>'+CATS[ci].name+"</h3><p>“"+g.scene+'”</p></div><span class="g-chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9l8 8 8-8"/></svg></span></div></summary><div class="g-body"><p class="g-what">'+g.what+'</p><ul class="g-why">'+g.why.map(function(w){return"<li>"+w+"</li>"}).join("")+'</ul><h3 class="g-sec">The products, and what each one does</h3>'+prods+gPkgsHTML(g.pkgs)+'<div class="g-actions"><button class="btn btn-navy" type="button" data-shop="'+ci+'">Shop '+CATS[ci].short+'</button><button class="btn btn-outline" type="button" data-gocz="'+ci+'">Customize with this</button></div></div></details>'}).join(""),document.querySelectorAll("#guideList .g-card").forEach(function(d){d.addEventListener("toggle",function(){d.open&&document.querySelectorAll("#guideList .g-card").forEach(function(o){o!==d&&o.open&&(o.open=!1)})})}),document.querySelectorAll("[data-shop]").forEach(function(b){b.addEventListener("click",function(){var ci=+b.getAttribute("data-shop");ensureProducts().then(function(){goView("products"),setCat(ci)})})}),document.querySelectorAll("[data-gocz]").forEach(function(b){b.addEventListener("click",function(){var ci=+b.getAttribute("data-gocz");ensureProducts().then(function(){goView("customize"),toast("Pick a package base, then tailor the "+CATS[ci].name+" items")})})})}renderSel();
 </script>
 <nav class="sk-tabbar" aria-label="Sections"><div class="sk-tabbar__inner"><a class="sk-tab" href="#" data-sk-view="packages"><svg class="sk-icon"><use href="#i-home"/></svg>Packages</a><a class="sk-tab" href="#" data-sk-view="products"><svg class="sk-icon"><use href="#i-list"/></svg>Products</a><a class="sk-tab" href="#" data-sk-view="customize"><svg class="sk-icon"><use href="#i-edit"/></svg>Customize</a><a class="sk-tab" href="#" data-sk-view="learn"><svg class="sk-icon"><use href="#i-doc"/></svg>Learn</a><a class="sk-tab" href="#" data-sk-view="compare"><svg class="sk-icon"><use href="#i-chart"/></svg>Compare</a></div></nav>
 <script>
@@ -1208,7 +475,7 @@ renderSel();
       e.preventDefault();
       var b = document.querySelector('[data-view="' + t.getAttribute("data-sk-view") + '"]');
       if (b) b.click();
-      sync(); scrollTo(0,0);
+      sync();
     });
   });
   document.addEventListener("click", function(){ setTimeout(sync, 30); });
