@@ -1,0 +1,15 @@
+/* macOS wide-screen look — presentation only (Sanjay, 2026-11-19).
+   Everything lives inside the >=960px query: phone layout is untouched,
+   no JS, no content/data changes. Kit variables only, so the Appearance
+   (light/dark) switch carries through.
+   POLISH-ONLY for this picker: no sidebar conversion and no content offset.
+   Its content is split across separate centered wrappers (.pagehead outside
+   <main>, <main> itself margin:0 auto), so a fixed 238px source-list sidebar
+   would overlap the pagehead and break main's centering. Instead: wider
+   max-width on the real wrappers (kept aligned), hover + selection polish. */
+@media (min-width:960px){
+ main,.pagehead,.sk-header__bar{max-width:1200px}
+ .sk-tab:hover{background:var(--sk-fill-2);color:var(--sk-text)}
+ .sk-row:hover{background:var(--sk-fill-2)}
+ ::selection{background:rgba(38,67,135,.16)}
+}
